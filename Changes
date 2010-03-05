@@ -1,5 +1,6 @@
 Revision history for ftn-jam
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+0.01    5 March 2010
+        - Used module-starter to create initial files and directory structure.
+        
 
