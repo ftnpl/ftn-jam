@@ -1,7 +1,7 @@
 #
 # WARNING! This library is EXPERIMENTAL and has not been thoroughly tested.
 #
-# JAM.pm 0.1 - A Perl module for handling JAM messagebases
+# JAM.pm 0.2 - A Perl module for handling JAM messagebases
 # Inspired by Björn Stenberg's JAMLIB.
 #
 # By Johan Billing <billing@df.lth.se>
@@ -14,6 +14,14 @@
 #  JAM(mbp) - Copyright 1993 Joaquim Homrighausen, Andrew Milner,
 #                            Mats Birch, Mats Wallin.
 #                            ALL RIGHTS RESERVED
+#
+# History
+#
+# 0.2 - Changed JAM.pm to use Time::Zone instead of Time::Timezone
+#     - Updated the demo programs to always use JAM::TimeToLocal and
+#       JAM::LocalToTime
+#
+# 0.1 - First public release
 #
 
 use strict;
@@ -89,7 +97,7 @@ use constant USER_NOT_FOUND     => 8;
 package JAM;
 
 use Time::Local;
-use Time::Timezone;
+use Time::Zone;
 
 use vars qw($Errnum);
 

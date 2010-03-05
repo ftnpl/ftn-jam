@@ -8,7 +8,6 @@ use strict;
 use warnings;
 
 use Text::Wrap;
-use Time::Timezone;
 use Time::Local;
 
 if ($#ARGV != 1 ) {

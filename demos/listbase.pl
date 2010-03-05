@@ -7,7 +7,6 @@ use JAM;
 use strict;
 use warnings;
 
-use Time::Timezone;
 use Time::Local;
 
 if ($#ARGV != 0 ) {
@@ -29,7 +28,7 @@ if (!JAM::ReadMBHeader($handle,\%baseheader)) {
    die "Failed to read messagebase header of $mb";
 }
 
-print "DateCreated: ",scalar localtime($baseheader{DateCreated}-tz_local_offset()+timegm(0, 0, 0, 1, 0, 70)),"\n";
+print "DateCreated: ",scalar localtime(JAM::LocalToTime($baseheader{DateCreated})),"\n";
 print " BaseMsgNum: $baseheader{BaseMsgNum}\n";
 print " ActiveMsgs: $baseheader{ActiveMsgs}\n";
 print "\n";
