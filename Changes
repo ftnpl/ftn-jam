@@ -1,5 +1,9 @@
 Revision history for ftn-jam
 
+0.02    5 July 2010
+        - Adapted v0.02 of FTN::JAM from v0.02 of the public domain Perl::JAM,
+        which is available at http://bitbucket.org/johanbilling/jampm/.
+        
 0.01    5 March 2010
         - Used module-starter to create initial files and directory structure.
         
