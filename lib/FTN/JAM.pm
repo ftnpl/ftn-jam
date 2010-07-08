@@ -108,13 +108,12 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 FUNCTIONS
 
+
 =head2 OpenMB
 
-=cut
+Syntax: $handle = FTN::JAM::OpenMB($jampath)
 
-#
-# Syntax: $handle = FTN::JAM::OpenMB($jampath)
-#
+=cut
 
 sub OpenMB
 {
@@ -170,14 +169,11 @@ sub OpenMB
 }
 
 
-##
 =head2 CreateMB
 
-=cut
+Syntax: $handle = FTN::JAM::CreateMB($jampath,$basemsg)
 
-#
-# Syntax: $handle = FTN::JAM::CreateMB($jampath,$basemsg)
-#
+=cut
 
 sub CreateMB
 {
@@ -261,14 +257,12 @@ sub CreateMB
    return \%filehash;
 }
 
-##
+
 =head2 CloseMB
 
-=cut
+Syntax: FTN::JAM::CloseMB($handle)
 
-#
-# Syntax: FTN::JAM::CloseMB($handle)
-#
+=cut
 
 sub CloseMB
 {
@@ -284,14 +278,12 @@ sub CloseMB
    close($$handleref{jlr});
 }
 
-##
+
 =head2 RemoveMB
 
-=cut
+Syntax: FTN::JAM::RemoveMB($jampath)
 
-#
-# Syntax: FTN::JAM::RemoveMB($jampath)
-#
+=cut
 
 sub RemoveMB
 {
@@ -337,14 +329,12 @@ sub RemoveMB
    return 1;
 }
 
-##
+
 =head2 LockMB
 
-=cut
+Syntax: $success = FTN::JAM::LockMB($handle,$timeout)
 
-#
-# Syntax: $success = FTN::JAM::LockMB($handle,$timeout)
-#
+=cut
 
 sub LockMB
 {
@@ -378,14 +368,12 @@ sub LockMB
    return;
 }
 
-##
+
 =head2 UnlockMB
 
-=cut
+Syntax: FTN::JAM::UnlockMB($handle)
 
-#
-# Syntax: FTN::JAM::UnlockMB($handle)
-#
+=cut
 
 sub UnlockMB
 {
@@ -401,14 +389,12 @@ sub UnlockMB
    }
 }
 
-##
+
 =head2 ReadMBHeader
 
-=cut
+Syntax: $success = FTN::JAM::ReadMBHeader($handle,\%header)
 
-#
-# Syntax: $success = FTN::JAM::ReadMBHeader($handle,\%header)
-# 
+=cut
 
 sub ReadMBHeader
 {
@@ -451,14 +437,12 @@ sub ReadMBHeader
    return 1;
 }
 
-##
+
 =head2 WriteMBHeader
 
-=cut
+Syntax: $success = FTN::JAM::WriteMBHeader($handle,\%header) 
 
-#
-# Syntax: $success = FTN::JAM::WriteMBHeader($handle,\%header)
-# 
+=cut
 
 sub WriteMBHeader
 {
@@ -504,14 +488,12 @@ sub WriteMBHeader
    return 1;
 }
 
-##
+
 =head2 GetMBSize
 
+Syntax: $success = FTN::JAM::GetMBSize($handle,\$num)
+ 
 =cut
-
-#
-# Syntax: $success = FTN::JAM::GetMBSize($handle,\$num)
-# 
 
 sub GetMBSize
 {
@@ -542,14 +524,12 @@ sub GetMBSize
    return 1;
 }
 
-##
+
 =head2 ReadMessage
 
-=cut
+Syntax: $success = FTN::JAM::ReadMessage($handle,$msgnum,\%header,\@subfields,\$text)
 
-#
-# Syntax: $success = FTN::JAM::ReadMessage($handle,$msgnum,\%header,\@subfields,\$text)
-# 
+=cut
 
 sub ReadMessage
 {
@@ -664,14 +644,12 @@ sub ReadMessage
    return 1;
 }
 
-##
+
 =head2 ChangeMessage
 
+Syntax: $success = FTN::JAM::ChangeMessage($handle,$msgnum,\%header)
+ 
 =cut
-
-#
-# Syntax: $success = FTN::JAM::ChangeMessage($handle,$msgnum,\%header)
-# 
 
 sub ChangeMessage
 {
@@ -785,14 +763,11 @@ sub ChangeMessage
 }
  
 
-##
 =head2 AddMessage
 
-=cut
+Syntax: $success = FTN::JAM::AddMessage($handle,\%header,\@subfields,\$text)
 
-#
-# Syntax: $success = FTN::JAM::AddMessage($handle,\%header,\@subfields,\$text)
-# 
+=cut
 
 sub AddMessage
 {
@@ -1000,14 +975,11 @@ sub AddMessage
 }
 
 
-##
 =head2 Crc32
 
-=cut
+Syntax: $crc32 = FTN::JAM::Crc32($data)
 
-#
-# Syntax: $crc32 = FTN::JAM::Crc32($data)
-#
+=cut
 
 sub Crc32
 {
@@ -1047,14 +1019,11 @@ sub Crc32
 }
 
 
-##
 =head2 FindUser
 
-=cut
-
-#
 # Syntax: $msgnum = FTN::JAM::FindUser($handle,$usercrc,$start)
-#
+
+=cut
 
 sub FindUser
 {
@@ -1105,15 +1074,12 @@ sub FindUser
 }
 
 
-
-##
 =head2 GetLastRead
+
+Syntax: $success = FTN::JAM::GetLastRead($handle,$usernum,\%lastread)
 
 =cut
 
-#
-# Syntax: $success = FTN::JAM::GetLastRead($handle,$usernum,\%lastread)
-#
 
 sub GetLastRead
 {
@@ -1159,15 +1125,11 @@ sub GetLastRead
 }
 
 
-
-##
 =head2 SetLastRead
 
-=cut
+Syntax: $success = FTN::JAM::SetLastRead($handle,$usernum,/%lastread)
 
-#
-# Syntax: $success = FTN::JAM::SetLastRead($handle,$usernum,/%lastread)
-#
+=cut
 
 sub SetLastRead
 {
@@ -1235,14 +1197,11 @@ sub SetLastRead
 }
 
 
-##
 =head2 TimeToLocal
 
-=cut
+Syntax $local = FTN::JAM::TimeToLocal($time)
 
-#
-# Syntax $local = FTN::JAM::TimeToLocal($time)
-#
+=cut
 
 sub TimeToLocal
 {
@@ -1254,14 +1213,11 @@ sub TimeToLocal
 }
 
 
-##
 =head2 LocalToTime
 
-=cut
+Syntax $time = FTN::JAM::LocalToTime($local)
 
-#
-# Syntax $time = FTN::JAM::LocalToTime($local)
-#
+=cut
 
 sub LocalToTime
 {
