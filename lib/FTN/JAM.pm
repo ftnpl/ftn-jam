@@ -95,14 +95,23 @@ our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+This module can be used for operations related to JAM messagebases, including the following:
+creating or removing a messagebase, listing the contents of a messagebase, adding a
+message to a messagebase, reading a message in a messagebase, changing a message in a 
+messagebase, or finding a user in a messagebase.
 
-Perhaps a little code snippet.
+Here is an example of how it can being used:
 
     use FTN::JAM;
 
-    my $foo = FTN::JAM->new();
+    my $mb = $ARGV[0];
+    my $basemsgnum = $ARGV[1];
+
+    my $handle = FTN::JAM::CreateMB($mb,$basemsgnum);
+
+    FTN::JAM::CloseMB($handle);
     ...
+
 
 =head1 EXPORT
 
