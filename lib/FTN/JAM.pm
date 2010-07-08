@@ -1267,6 +1267,14 @@ You can also look for information at:
 
 =over 4
 
+=item * FTN::JAM Home Page
+
+L<http://ftnpl.sourceforge.net/ftnpljam.html>
+
+=item * Browsse the FTN::JAM GIT repository at SourceForge
+
+L<http://ftnpl.git.sourceforge.net/git/gitweb.cgi?p=ftnpl/ftn-jam.git>
+
 =item * RT: CPAN's request tracker
 
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ftn-jam>
