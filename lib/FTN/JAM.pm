@@ -115,11 +115,12 @@ Here is an example of how it can being used:
 
 =head1 EXPORT
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+The following functions are available in the module:  OpenMB, CreateMB, CloseMB,
+RemoveMB, LockMB, UnlockMB, ReadMBHeader, WriteMBHeader, GetMBSize, ReadMessage,
+ChangeMessage, AddMessage, Crc32, FindUser, GetLastRead, SetLastRead, TimeToLocal,
+and LocalToTime.
 
 =head1 FUNCTIONS
-
 
 =head2 OpenMB
 
