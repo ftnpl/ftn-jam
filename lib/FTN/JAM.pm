@@ -27,6 +27,7 @@ use constant FLAGS       => 2003;
 use constant TZUTCINFO   => 2004;
 use constant UNKNOWN     => 0xffff;
 
+
 package JAM::Attr;
 
 use constant LOCAL       => 0x00000001; 
@@ -59,6 +60,7 @@ use constant NODISP      => 0x20000000;
 use constant LOCKED      => 0x40000000;
 use constant DELETED     => 0x80000000;
 
+
 package JAM::Errnum;
 
 use constant IO_ERROR           => 1;
@@ -69,6 +71,7 @@ use constant MSGHEADER_UNKNOWN  => 5;
 use constant MSG_DELETED        => 6;
 use constant BASE_NOT_LOCKED    => 7;
 use constant USER_NOT_FOUND     => 8;
+
 
 package FTN::JAM;
 
@@ -118,7 +121,7 @@ Syntax: $handle = FTN::JAM::OpenMB($jampath)
 sub OpenMB
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::OpenMB";
+      die "Wrong number of arguments for FTN::JAM::OpenMB";
    }
 
    my $jampath = $_[0];
@@ -178,7 +181,7 @@ Syntax: $handle = FTN::JAM::CreateMB($jampath,$basemsg)
 sub CreateMB
 {
    if ( $#_ != 1 ) {
-      die "Wrong number of arguments for JAM::CreateMB";
+      die "Wrong number of arguments for FTN::JAM::CreateMB";
    }
 
    my $jampath = $_[0];
@@ -267,7 +270,7 @@ Syntax: FTN::JAM::CloseMB($handle)
 sub CloseMB
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::CloseMB";
+      die "Wrong number of arguments for FTN::JAM::CloseMB";
    }
    
    my $handleref = $_[0];
@@ -288,7 +291,7 @@ Syntax: FTN::JAM::RemoveMB($jampath)
 sub RemoveMB
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::RemoveMB";
+      die "Wrong number of arguments for FTN::JAM::RemoveMB";
    }
 
    my $jampath = $_[0];
@@ -339,7 +342,7 @@ Syntax: $success = FTN::JAM::LockMB($handle,$timeout)
 sub LockMB
 {
    if ( $#_ != 1 ) {
-      die "Wrong number of arguments for JAM::LockMB";
+      die "Wrong number of arguments for FTN::JAM::LockMB";
    }
    
    my $handleref = $_[0];
@@ -378,7 +381,7 @@ Syntax: FTN::JAM::UnlockMB($handle)
 sub UnlockMB
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::UnlockMB";
+      die "Wrong number of arguments for FTN::JAM::UnlockMB";
    }
 
    my $handleref = $_[0];
@@ -399,7 +402,7 @@ Syntax: $success = FTN::JAM::ReadMBHeader($handle,\%header)
 sub ReadMBHeader
 {
    if ( $#_ != 1 ) {
-      die "Wrong number of arguments for JAM::ReadMBHeader";
+      die "Wrong number of arguments for FTN::JAM::ReadMBHeader";
    }
    
    my $handleref = $_[0];
@@ -447,7 +450,7 @@ Syntax: $success = FTN::JAM::WriteMBHeader($handle,\%header)
 sub WriteMBHeader
 {
    if ( $#_ != 1 ) {
-      die "Wrong number of arguments for JAM::WriteMBHeader";
+      die "Wrong number of arguments for FTN::JAM::WriteMBHeader";
    }
    
    my $handleref = $_[0];
@@ -498,7 +501,7 @@ Syntax: $success = FTN::JAM::GetMBSize($handle,\$num)
 sub GetMBSize
 {
    if ( $#_ != 1 ) {
-      die "Wrong number of arguments for JAM::GetMBSize";
+      die "Wrong number of arguments for FTN::JAM::GetMBSize";
    }
    
    my $handleref = $_[0];
@@ -534,7 +537,7 @@ Syntax: $success = FTN::JAM::ReadMessage($handle,$msgnum,\%header,\@subfields,\$
 sub ReadMessage
 {
    if ( $#_ != 4 ) {
-      die "Wrong number of arguments for JAM::ReadMessage";
+      die "Wrong number of arguments for FTN::JAM::ReadMessage";
    }
 
    my $handleref    = $_[0];
@@ -654,7 +657,7 @@ Syntax: $success = FTN::JAM::ChangeMessage($handle,$msgnum,\%header)
 sub ChangeMessage
 {
    if ( $#_ != 2 ) {
-      die "Wrong number of arguments for JAM::ChangeMessage";
+      die "Wrong number of arguments for FTN::JAM::ChangeMessage";
    }
 
    my $handleref    = $_[0];
@@ -772,7 +775,7 @@ Syntax: $success = FTN::JAM::AddMessage($handle,\%header,\@subfields,\$text)
 sub AddMessage
 {
    if ( $#_ != 3 ) {
-      die "Wrong number of arguments for JAM::AddMessage";
+      die "Wrong number of arguments for FTN::JAM::AddMessage";
    }
 
    my $handleref    = $_[0];
@@ -984,7 +987,7 @@ Syntax: $crc32 = FTN::JAM::Crc32($data)
 sub Crc32
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::Crc32";
+      die "Wrong number of arguments for FTN::JAM::Crc32";
    }
 
    my $data = $_[0];
@@ -1028,7 +1031,7 @@ sub Crc32
 sub FindUser
 {
    if ( $#_ != 2 ) {
-      die "Wrong number of arguments for JAM::FindUser";
+      die "Wrong number of arguments for FTN::JAM::FindUser";
    }
     
    my $handleref = $_[0];
@@ -1084,7 +1087,7 @@ Syntax: $success = FTN::JAM::GetLastRead($handle,$usernum,\%lastread)
 sub GetLastRead
 {
    if ( $#_ != 2 ) {
-      die "Wrong number of arguments for JAM::GetLastRead";
+      die "Wrong number of arguments for FTN::JAM::GetLastRead";
    }
     
    my $handleref   = $_[0];
@@ -1134,7 +1137,7 @@ Syntax: $success = FTN::JAM::SetLastRead($handle,$usernum,/%lastread)
 sub SetLastRead
 {
    if ( $#_ != 2 ) {
-      die "Wrong number of arguments for JAM::SetLastRead";
+      die "Wrong number of arguments for FTN::JAM::SetLastRead";
    }
     
    my $handleref   = $_[0];
@@ -1206,7 +1209,7 @@ Syntax $local = FTN::JAM::TimeToLocal($time)
 sub TimeToLocal
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::TimeToLocal";
+      die "Wrong number of arguments for FTN::JAM::TimeToLocal";
    }
    
    return $_[0]-timegm(0, 0, 0, 1, 0, 70)+tz_local_offset();
@@ -1222,7 +1225,7 @@ Syntax $time = FTN::JAM::LocalToTime($local)
 sub LocalToTime
 {
    if ( $#_ != 0 ) {
-      die "Wrong number of arguments for JAM::LocalToTime";
+      die "Wrong number of arguments for FTN::JAM::LocalToTime";
    }
    
    return $_[0]+timegm(0, 0, 0, 1, 0, 70)-tz_local_offset();
