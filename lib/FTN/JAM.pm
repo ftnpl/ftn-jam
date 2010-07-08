@@ -113,7 +113,7 @@ if you don't export anything, such as for a purely object-oriented module.
 =cut
 
 #
-# Syntax: $handle = JAM::OpenMB($jampath)
+# Syntax: $handle = FTN::JAM::OpenMB($jampath)
 #
 
 sub OpenMB
@@ -176,7 +176,7 @@ sub OpenMB
 =cut
 
 #
-# Syntax: $handle = JAM::CreateMB($jampath,$basemsg)
+# Syntax: $handle = FTN::JAM::CreateMB($jampath,$basemsg)
 #
 
 sub CreateMB
@@ -267,7 +267,7 @@ sub CreateMB
 =cut
 
 #
-# Syntax: JAM::CloseMB($handle)
+# Syntax: FTN::JAM::CloseMB($handle)
 #
 
 sub CloseMB
@@ -290,7 +290,7 @@ sub CloseMB
 =cut
 
 #
-# Syntax: JAM::RemoveMB($jampath)
+# Syntax: FTN::JAM::RemoveMB($jampath)
 #
 
 sub RemoveMB
@@ -343,7 +343,7 @@ sub RemoveMB
 =cut
 
 #
-# Syntax: $success = JAM::LockMB($handle,$timeout)
+# Syntax: $success = FTN::JAM::LockMB($handle,$timeout)
 #
 
 sub LockMB
@@ -384,7 +384,7 @@ sub LockMB
 =cut
 
 #
-# Syntax: JAM::UnlockMB($handle)
+# Syntax: FTN::JAM::UnlockMB($handle)
 #
 
 sub UnlockMB
@@ -407,7 +407,7 @@ sub UnlockMB
 =cut
 
 #
-# Syntax: $success = JAM::ReadMBHeader($handle,\%header)
+# Syntax: $success = FTN::JAM::ReadMBHeader($handle,\%header)
 # 
 
 sub ReadMBHeader
@@ -457,7 +457,7 @@ sub ReadMBHeader
 =cut
 
 #
-# Syntax: $success = JAM::WriteMBHeader($handle,\%header)
+# Syntax: $success = FTN::JAM::WriteMBHeader($handle,\%header)
 # 
 
 sub WriteMBHeader
@@ -510,7 +510,7 @@ sub WriteMBHeader
 =cut
 
 #
-# Syntax: $success = JAM::GetMBSize($handle,\$num)
+# Syntax: $success = FTN::JAM::GetMBSize($handle,\$num)
 # 
 
 sub GetMBSize
@@ -548,7 +548,7 @@ sub GetMBSize
 =cut
 
 #
-# Syntax: $success = JAM::ReadMessage($handle,$msgnum,\%header,\@subfields,\$text)
+# Syntax: $success = FTN::JAM::ReadMessage($handle,$msgnum,\%header,\@subfields,\$text)
 # 
 
 sub ReadMessage
@@ -670,7 +670,7 @@ sub ReadMessage
 =cut
 
 #
-# Syntax: $success = JAM::ChangeMessage($handle,$msgnum,\%header)
+# Syntax: $success = FTN::JAM::ChangeMessage($handle,$msgnum,\%header)
 # 
 
 sub ChangeMessage
@@ -791,7 +791,7 @@ sub ChangeMessage
 =cut
 
 #
-# Syntax: $success = JAM::AddMessage($handle,\%header,\@subfields,\$text)
+# Syntax: $success = FTN::JAM::AddMessage($handle,\%header,\@subfields,\$text)
 # 
 
 sub AddMessage
@@ -1006,7 +1006,7 @@ sub AddMessage
 =cut
 
 #
-# Syntax: $crc32 = JAM::Crc32($data)
+# Syntax: $crc32 = FTN::JAM::Crc32($data)
 #
 
 sub Crc32
@@ -1053,7 +1053,7 @@ sub Crc32
 =cut
 
 #
-# Syntax: $msgnum = JAM::FindUser($handle,$usercrc,$start)
+# Syntax: $msgnum = FTN::JAM::FindUser($handle,$usercrc,$start)
 #
 
 sub FindUser
@@ -1112,7 +1112,7 @@ sub FindUser
 =cut
 
 #
-# Syntax: $success = JAM::GetLastRead($handle,$usernum,\%lastread)
+# Syntax: $success = FTN::JAM::GetLastRead($handle,$usernum,\%lastread)
 #
 
 sub GetLastRead
@@ -1166,7 +1166,7 @@ sub GetLastRead
 =cut
 
 #
-# Syntax: $success = JAM::SetLastRead($handle,$usernum,/%lastread)
+# Syntax: $success = FTN::JAM::SetLastRead($handle,$usernum,/%lastread)
 #
 
 sub SetLastRead
@@ -1241,7 +1241,7 @@ sub SetLastRead
 =cut
 
 #
-# Syntax $local = JAM::TimeToLocal($time)
+# Syntax $local = FTN::JAM::TimeToLocal($time)
 #
 
 sub TimeToLocal
@@ -1260,7 +1260,7 @@ sub TimeToLocal
 =cut
 
 #
-# Syntax $time = JAM::LocalToTime($local)
+# Syntax $time = FTN::JAM::LocalToTime($local)
 #
 
 sub LocalToTime
