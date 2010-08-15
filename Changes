@@ -1,5 +1,13 @@
 Revision history for ftn-jam
 
+0.03    UNRELEASED
+	- Updated documentation in README and the POD in lib/FTN/JAM.pm:
+	Corrected the subroutines error message package references. Corrected
+	the sub-package naming and references. Edits for spelling, wording, and
+	formating. Added a module usage summary to the SYNOPIS section.  Moved
+	the syntax comments to their POD section.  Correct the subroutine error
+	message package references. 
+	
 0.02    5 July 2010
         - Adapted v0.02 of FTN::JAM from v0.02 of the public domain Perl::JAM,
         which is available at http://bitbucket.org/johanbilling/jampm/.
