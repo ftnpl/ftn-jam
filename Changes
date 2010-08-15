@@ -1,6 +1,6 @@
 Revision history for ftn-jam
 
-0.03    UNRELEASED
+0.03    14 August 2010
 	- Updated documentation in README and the POD in lib/FTN/JAM.pm:
 	Corrected the subroutines error message package references. Corrected
 	the sub-package naming and references. Edits for spelling, wording, and
