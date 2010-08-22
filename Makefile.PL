@@ -7,6 +7,7 @@ WriteMakefile(
     AUTHOR              => 'Robert James Clay <jame@rocasa.us>',
     VERSION_FROM        => 'lib/FTN/JAM.pm',
     ABSTRACT_FROM       => 'lib/FTN/JAM.pm',
+    LICENSE        	=> 'perl',
     PL_FILES            => {},
     PREREQ_PM => {
         'Time::Local' 		=> 0,
