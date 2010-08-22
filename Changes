@@ -1,18 +1,24 @@
 Revision history for ftn-jam
 
+0.04    22 August 2010
+    - Add doc/ToDo to distribution.
+    - Add a LICENSE entry ('perl') to Makefile.PL file.
+    - Added the Time::Local and Time::Zone modules to the PREREQ_PM list
+    in Makefile.PL.
+    - Added the Test::Pod and Test::Pod::Coverage modules to the PREREQ_PM
+    list in Makefile.PL.
+
 0.03    14 August 2010
-	- Updated documentation in README and the POD in lib/FTN/JAM.pm:
-	Corrected the subroutines error message package references. Corrected
-	the sub-package naming and references. Edits for spelling, wording, and
-	formating. Added a module usage summary to the SYNOPIS section.  Moved
-	the syntax comments to their POD section.  Correct the subroutine error
-	message package references. 
+    - Updated documentation in README and the POD in lib/FTN/JAM.pm:
+    Corrected the subroutines error message package references. Corrected
+    the sub-package naming and references. Edits for spelling, wording, and
+    formating. Added a module usage summary to the SYNOPIS section.  Moved
+    the syntax comments to their POD section.  Correct the subroutine error
+    message package references. 
 	
 0.02    5 July 2010
-        - Adapted v0.02 of FTN::JAM from v0.02 of the public domain Perl::JAM,
-        which is available at http://bitbucket.org/johanbilling/jampm/.
+    - Adapted v0.02 of FTN::JAM from v0.02 of the public domain Perl::JAM,
+    which is available at http://bitbucket.org/johanbilling/jampm/.
         
 0.01    5 March 2010
-        - Used module-starter to create initial files and directory structure.
-        
-
+    - Used module-starter to create initial files and directory structure.
