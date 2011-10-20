@@ -83,11 +83,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -631,7 +631,7 @@ sub ReadMessage {
             return;
         }
 
-        %$subfieldsref = ();
+        @$subfieldsref = ();
 
         while ($buf) {
             @data = unpack( "LL", $buf );
@@ -1310,7 +1310,7 @@ L<http://search.cpan.org/dist/ftn-jam>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010 Robert James Clay, all rights reserved.
+Copyright 2010-2011 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
