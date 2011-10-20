@@ -631,7 +631,7 @@ sub ReadMessage {
             return;
         }
 
-        %$subfieldsref = ();
+        @$subfieldsref = ();
 
         while ($buf) {
             @data = unpack( "LL", $buf );
