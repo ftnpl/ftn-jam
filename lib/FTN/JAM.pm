@@ -1307,6 +1307,9 @@ L<http://search.cpan.org/dist/ftn-jam>
 
 =head1 ACKNOWLEDGEMENTS
 
+Originally based on the public domain Perl::JAM module by Johan Billing, which
+can be found at L<https://bitbucket.org/johanbilling/jampm/overview>.
+
 =head1 SEE ALSO
 
  L<FTN::JAM>, L<FTN::JAM::Examples>
