@@ -1,5 +1,11 @@
 Revision history for ftn-jam
 
+0.06    20 October 2011
+    - Move the file doc/ToDo to the lib/FTN/JAM source directory, rename
+    and reformat the file as ToDo.pod.
+    - Reorganized the documentation in JAM.pm: adding a SEE ALSO section,
+    cleaning up white space,and expanding the ACKNOWLEDGEMENTS section.
+
 0.05    19 October 2011
     - Update copyright years to include 2011.
     - A bug in line 634 of JAM.pm was causing "Not a HASH reference" error
