@@ -1307,6 +1307,9 @@ L<http://search.cpan.org/dist/ftn-jam>
 
 =head1 ACKNOWLEDGEMENTS
 
+=head1 SEE ALSO
+
+ L<FTN::JAM>, L<FTN::JAM::Examples>
 
 =head1 COPYRIGHT & LICENSE
 
