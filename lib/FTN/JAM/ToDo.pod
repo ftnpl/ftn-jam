@@ -1,5 +1,39 @@
-ToDo:
+=head1 FTN::JAM ToDo
 
-- Add test subroutines for createing and removing a message base:  for that,
-  need to figure out where to put temporary files used with/for/in testing.
+Correct issue with the following subroutines not ending with a return:
+CloseMB, UnlockMB, FindUser.
+
+Correct issue with using bareword file handles (ref also bug # 66608) in
+the OpenMB & CloseMB functions.
+
+Correct issue with using 2 argument open() calls instead of 3 argument
+open() in the OpenMB & CloseMB functions.
+
+Correct issue with how constants are defined & used: using something like
+ReadOnly instead of the 'constant' pragma?
+
+Create a file containing examples of using FTN::JAM, possibly using something
+from the demo scripts as a basis.  Do this instead of simply cleaning up the
+old demo scripts and including them in the distribution?
+
+Add test subroutines for createing and removing a message base:  for that,
+need to figure out where to put temporary files used with/for/in testing.
+
+=head1 SEE ALSO
+
+ L<FTN::JAM>, L<FTN::JAM::Examples>
+
+=head1 AUTHOR
+
+Robert James Clay, C<< <jame at rocasa.us> >>
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2011 Robert James Clay, all rights reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
+
 
