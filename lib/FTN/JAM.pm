@@ -503,7 +503,7 @@ sub WriteMBHeader {
 =head2 GetMBSize
 
 Syntax: $success = FTN::JAM::GetMBSize($handle,\$num)
- 
+
 =cut
 
 sub GetMBSize {
@@ -662,7 +662,7 @@ sub ReadMessage {
 =head2 ChangeMessage
 
 Syntax: $success = FTN::JAM::ChangeMessage($handle,$msgnum,\%header)
- 
+
 =cut
 
 sub ChangeMessage {
@@ -1264,15 +1264,11 @@ Please report any bugs or feature requests to C<bug-ftn-jam at rt.cpan.org>, or 
 interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ftn-jam>.  I will be notified, and
 then you'll automatically be notified of progress on your bug as I make changes.
 
-
-
-
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
     perldoc FTN::JAM
-
 
 You can also look for information at:
 
@@ -1304,7 +1300,6 @@ L<http://search.cpan.org/dist/ftn-jam>
 
 =back
 
-
 =head1 ACKNOWLEDGEMENTS
 
 Originally based on the public domain Perl::JAM module by Johan Billing, which
@@ -1320,7 +1315,6 @@ Copyright 2010-2011 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
 
 =cut
 
