@@ -5,70 +5,76 @@ use strict;
 
 package FTN::JAM::Subfields;
 
-use constant OADDRESS    => 0;
-use constant DADDRESS    => 1;
-use constant SENDERNAME  => 2;
-use constant RECVRNAME   => 3;
-use constant MSGID       => 4;
-use constant REPLYID     => 5;
-use constant SUBJECT     => 6;
-use constant PID         => 7;
-use constant TRACE       => 8;
-use constant ENCLFILE    => 9;
-use constant ENCLFWALIAS => 10;
-use constant ENCLFREQ    => 11;
-use constant ENCLFILEWC  => 12;
-use constant ENCLINDFILE => 13;
-use constant EMBINDAT    => 1000;
-use constant FTSKLUDGE   => 2000;
-use constant SEENBY2D    => 2001;
-use constant PATH2D      => 2002;
-use constant FLAGS       => 2003;
-use constant TZUTCINFO   => 2004;
-use constant UNKNOWN     => 0xffff;
+use ReadOnly;
+
+ReadOnly my $OADDRESS    => 0;
+ReadOnly my $DADDRESS    => 1;
+ReadOnly my $SENDERNAME  => 2;
+ReadOnly my $RECVRNAME   => 3;
+ReadOnly my $MSGID       => 4;
+ReadOnly my $REPLYID     => 5;
+ReadOnly my $SUBJECT     => 6;
+ReadOnly my $PID         => 7;
+ReadOnly my $TRACE       => 8;
+ReadOnly my $ENCLFILE    => 9;
+ReadOnly my $ENCLFWALIAS => 10;
+ReadOnly my $ENCLFREQ    => 11;
+ReadOnly my $ENCLFILEWC  => 12;
+ReadOnly my $ENCLINDFILE => 13;
+ReadOnly my $EMBINDAT    => 1000;
+ReadOnly my $FTSKLUDGE   => 2000;
+ReadOnly my $SEENBY2D    => 2001;
+ReadOnly my $PATH2D      => 2002;
+ReadOnly my $FLAGS       => 2003;
+ReadOnly my $TZUTCINFO   => 2004;
+ReadOnly my $UNKNOWN     => 0xffff;
 
 package FTN::JAM::Attr;
 
-use constant LOCAL       => 0x00000001;
-use constant INTRANSIT   => 0x00000002;
-use constant PRIVATE     => 0x00000004;
-use constant READ        => 0x00000008;
-use constant SENT        => 0x00000010;
-use constant KILLSENT    => 0x00000020;
-use constant ARCHIVESENT => 0x00000040;
-use constant HOLD        => 0x00000080;
-use constant CRASH       => 0x00000100;
-use constant IMMEDIATE   => 0x00000200;
-use constant DIRECT      => 0x00000400;
-use constant GATE        => 0x00000800;
-use constant FILEREQUEST => 0x00001000;
-use constant FILEATTACH  => 0x00002000;
-use constant TRUNCFILE   => 0x00004000;
-use constant KILLFILE    => 0x00008000;
-use constant RECEIPTREQ  => 0x00010000;
-use constant CONFIRMREQ  => 0x00020000;
-use constant ORPHAN      => 0x00040000;
-use constant ENCRYPT     => 0x00080000;
-use constant COMPRESS    => 0x00100000;
-use constant ESCAPED     => 0x00200000;
-use constant FPU         => 0x00400000;
-use constant TYPELOCAL   => 0x00800000;
-use constant TYPEECHO    => 0x01000000;
-use constant TYPENET     => 0x02000000;
-use constant NODISP      => 0x20000000;
-use constant LOCKED      => 0x40000000;
-use constant DELETED     => 0x80000000;
+use ReadOnly;
+
+ReadOnly my $LOCAL       => 0x00000001;
+ReadOnly my $INTRANSIT   => 0x00000002;
+ReadOnly my $PRIVATE     => 0x00000004;
+ReadOnly my $READ        => 0x00000008;
+ReadOnly my $SENT        => 0x00000010;
+ReadOnly my $KILLSENT    => 0x00000020;
+ReadOnly my $ARCHIVESENT => 0x00000040;
+ReadOnly my $HOLD        => 0x00000080;
+ReadOnly my $CRASH       => 0x00000100;
+ReadOnly my $IMMEDIATE   => 0x00000200;
+ReadOnly my $DIRECT      => 0x00000400;
+ReadOnly my $GATE        => 0x00000800;
+ReadOnly my $FILEREQUEST => 0x00001000;
+ReadOnly my $FILEATTACH  => 0x00002000;
+ReadOnly my $TRUNCFILE   => 0x00004000;
+ReadOnly my $KILLFILE    => 0x00008000;
+ReadOnly my $RECEIPTREQ  => 0x00010000;
+ReadOnly my $CONFIRMREQ  => 0x00020000;
+ReadOnly my $ORPHAN      => 0x00040000;
+ReadOnly my $ENCRYPT     => 0x00080000;
+ReadOnly my $COMPRESS    => 0x00100000;
+ReadOnly my $ESCAPED     => 0x00200000;
+ReadOnly my $FPU         => 0x00400000;
+ReadOnly my $TYPELOCAL   => 0x00800000;
+ReadOnly my $TYPEECHO    => 0x01000000;
+ReadOnly my $TYPENET     => 0x02000000;
+ReadOnly my $NODISP      => 0x20000000;
+ReadOnly my $LOCKED      => 0x40000000;
+ReadOnly my $DELETED     => 0x80000000;
 
 package FTN::JAM::Errnum;
 
-use constant IO_ERROR           => 1;
-use constant BASE_EXISTS        => 2;
-use constant BASEHEADER_CORRUPT => 3;
-use constant MSGHEADER_CORRUPT  => 4;
-use constant MSGHEADER_UNKNOWN  => 5;
-use constant MSG_DELETED        => 6;
-use constant BASE_NOT_LOCKED    => 7;
-use constant USER_NOT_FOUND     => 8;
+use ReadOnly;
+
+ReadOnly my $IO_ERROR           => 1;
+ReadOnly my $BASE_EXISTS        => 2;
+ReadOnly my $BASEHEADER_CORRUPT => 3;
+ReadOnly my $MSGHEADER_CORRUPT  => 4;
+ReadOnly my $MSGHEADER_UNKNOWN  => 5;
+ReadOnly my $MSG_DELETED        => 6;
+ReadOnly my $BASE_NOT_LOCKED    => 7;
+ReadOnly my $USER_NOT_FOUND     => 8;
 
 package FTN::JAM;
 
@@ -83,11 +89,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 SYNOPSIS
 

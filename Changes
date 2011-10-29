@@ -1,5 +1,9 @@
 Revision history for ftn-jam
 
+0.08    18:35 29 October 2011
+    - Correct issue with how constants are defined, using the ReadOnly function
+    instead of the 'constant' pragma.
+
 0.07    16:56 29 October 2011
     - Corrected issue with the following subroutines not ending with a return:
     CloseMB, UnlockMB, and FindUser.
