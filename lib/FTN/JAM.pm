@@ -5,6 +5,8 @@ use strict;
 
 package FTN::JAM::Subfields;
 
+use ReadOnly;
+
 use constant OADDRESS    => 0;
 use constant DADDRESS    => 1;
 use constant SENDERNAME  => 2;
@@ -28,6 +30,8 @@ use constant TZUTCINFO   => 2004;
 use constant UNKNOWN     => 0xffff;
 
 package FTN::JAM::Attr;
+
+use ReadOnly;
 
 use constant LOCAL       => 0x00000001;
 use constant INTRANSIT   => 0x00000002;
@@ -60,6 +64,8 @@ use constant LOCKED      => 0x40000000;
 use constant DELETED     => 0x80000000;
 
 package FTN::JAM::Errnum;
+
+use ReadOnly;
 
 use constant IO_ERROR           => 1;
 use constant BASE_EXISTS        => 2;
