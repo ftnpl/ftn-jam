@@ -1,5 +1,8 @@
 Revision history for ftn-jam
 
+0.08    17:08 29 October 2011
+    - Start development for v0.08
+
 0.07    16:56 29 October 2011
     - Corrected issue with the following subroutines not ending with a return:
     CloseMB, UnlockMB, and FindUser.
