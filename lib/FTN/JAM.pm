@@ -296,6 +296,8 @@ sub CloseMB {
     close( $$handleref{jhr} );
     close( $$handleref{jdt} );
     close( $$handleref{jlr} );
+
+    return;
 }
 
 =head2 RemoveMB
@@ -400,6 +402,7 @@ sub UnlockMB {
         flock( $$handleref{jhr}, 8 );
         delete $$handleref{locked};
     }
+    return;
 }
 
 =head2 ReadMBHeader
@@ -1106,6 +1109,7 @@ sub FindUser {
 
         $msgnum++;
     }
+    return;
 }
 
 =head2 GetLastRead
