@@ -89,11 +89,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.08
+Version 0.09
 
 =cut
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 =head1 SYNOPSIS
 
@@ -137,10 +137,10 @@ sub OpenMB {
 
     my $jampath = $_[0];
 
-    my $jhrres = open( JHR, "+<" . $jampath . ".jhr" );
-    my $jdxres = open( JDX, "+<" . $jampath . ".jdx" );
-    my $jdtres = open( JDT, "+<" . $jampath . ".jdt" );
-    my $jlrres = open( JLR, "+<" . $jampath . ".jlr" );
+    my $jhrres = open( JHR, q{+<}, $jampath . ".jhr" );
+    my $jdxres = open( JDX, q{+<}, $jampath . ".jdx" );
+    my $jdtres = open( JDT, q{+<}, $jampath . ".jdt" );
+    my $jlrres = open( JLR, q{+<}, $jampath . ".jlr" );
 
     if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
         if ($jhrres) {
@@ -214,10 +214,10 @@ sub CreateMB {
         return;
     }
 
-    my $jhrres = open( JHR, "+>" . $jampath . ".jhr" );
-    my $jdxres = open( JDX, "+>" . $jampath . ".jdx" );
-    my $jdtres = open( JDT, "+>" . $jampath . ".jdt" );
-    my $jlrres = open( JLR, "+>" . $jampath . ".jlr" );
+    my $jhrres = open( JHR, q{+>}, $jampath . ".jhr" );
+    my $jdxres = open( JDX, q{+>}, $jampath . ".jdx" );
+    my $jdtres = open( JDT, q{+>}, $jampath . ".jdt" );
+    my $jlrres = open( JLR, q{+>}, $jampath . ".jlr" );
 
     if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
         if ($jhrres) {
