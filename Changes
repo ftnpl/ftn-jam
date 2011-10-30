@@ -1,7 +1,10 @@
 Revision history for ftn-jam
 
+0.09    21:12 29 October 2011
+    - start v0.09
+
 0.08    21:03 29 October 2011
-    - Add ReadOnly to Makefile.PL as a required module."
+    - Add ReadOnly to Makefile.PL as a required module.
     - Correct issue with how constants are defined, using the ReadOnly function
     instead of the 'constant' pragma in JAM.pm.
 
