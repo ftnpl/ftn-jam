@@ -10,6 +10,7 @@ WriteMakefile(
     LICENSE        	=> 'perl',
     PL_FILES            => {},
     PREREQ_PM => {
+        'Readonly' 		=> 0,
         'Time::Local' 		=> 0,
         'Time::Zone' 		=> 0,
         'Test::More' 		=> 0,

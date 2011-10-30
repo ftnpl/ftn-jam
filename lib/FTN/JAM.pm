@@ -5,76 +5,76 @@ use strict;
 
 package FTN::JAM::Subfields;
 
-use ReadOnly;
+use Readonly;
 
-ReadOnly my $OADDRESS    => 0;
-ReadOnly my $DADDRESS    => 1;
-ReadOnly my $SENDERNAME  => 2;
-ReadOnly my $RECVRNAME   => 3;
-ReadOnly my $MSGID       => 4;
-ReadOnly my $REPLYID     => 5;
-ReadOnly my $SUBJECT     => 6;
-ReadOnly my $PID         => 7;
-ReadOnly my $TRACE       => 8;
-ReadOnly my $ENCLFILE    => 9;
-ReadOnly my $ENCLFWALIAS => 10;
-ReadOnly my $ENCLFREQ    => 11;
-ReadOnly my $ENCLFILEWC  => 12;
-ReadOnly my $ENCLINDFILE => 13;
-ReadOnly my $EMBINDAT    => 1000;
-ReadOnly my $FTSKLUDGE   => 2000;
-ReadOnly my $SEENBY2D    => 2001;
-ReadOnly my $PATH2D      => 2002;
-ReadOnly my $FLAGS       => 2003;
-ReadOnly my $TZUTCINFO   => 2004;
-ReadOnly my $UNKNOWN     => 0xffff;
+Readonly my $OADDRESS    => 0;
+Readonly my $DADDRESS    => 1;
+Readonly my $SENDERNAME  => 2;
+Readonly my $RECVRNAME   => 3;
+Readonly my $MSGID       => 4;
+Readonly my $REPLYID     => 5;
+Readonly my $SUBJECT     => 6;
+Readonly my $PID         => 7;
+Readonly my $TRACE       => 8;
+Readonly my $ENCLFILE    => 9;
+Readonly my $ENCLFWALIAS => 10;
+Readonly my $ENCLFREQ    => 11;
+Readonly my $ENCLFILEWC  => 12;
+Readonly my $ENCLINDFILE => 13;
+Readonly my $EMBINDAT    => 1000;
+Readonly my $FTSKLUDGE   => 2000;
+Readonly my $SEENBY2D    => 2001;
+Readonly my $PATH2D      => 2002;
+Readonly my $FLAGS       => 2003;
+Readonly my $TZUTCINFO   => 2004;
+Readonly my $UNKNOWN     => 0xffff;
 
 package FTN::JAM::Attr;
 
-use ReadOnly;
+use Readonly;
 
-ReadOnly my $LOCAL       => 0x00000001;
-ReadOnly my $INTRANSIT   => 0x00000002;
-ReadOnly my $PRIVATE     => 0x00000004;
-ReadOnly my $READ        => 0x00000008;
-ReadOnly my $SENT        => 0x00000010;
-ReadOnly my $KILLSENT    => 0x00000020;
-ReadOnly my $ARCHIVESENT => 0x00000040;
-ReadOnly my $HOLD        => 0x00000080;
-ReadOnly my $CRASH       => 0x00000100;
-ReadOnly my $IMMEDIATE   => 0x00000200;
-ReadOnly my $DIRECT      => 0x00000400;
-ReadOnly my $GATE        => 0x00000800;
-ReadOnly my $FILEREQUEST => 0x00001000;
-ReadOnly my $FILEATTACH  => 0x00002000;
-ReadOnly my $TRUNCFILE   => 0x00004000;
-ReadOnly my $KILLFILE    => 0x00008000;
-ReadOnly my $RECEIPTREQ  => 0x00010000;
-ReadOnly my $CONFIRMREQ  => 0x00020000;
-ReadOnly my $ORPHAN      => 0x00040000;
-ReadOnly my $ENCRYPT     => 0x00080000;
-ReadOnly my $COMPRESS    => 0x00100000;
-ReadOnly my $ESCAPED     => 0x00200000;
-ReadOnly my $FPU         => 0x00400000;
-ReadOnly my $TYPELOCAL   => 0x00800000;
-ReadOnly my $TYPEECHO    => 0x01000000;
-ReadOnly my $TYPENET     => 0x02000000;
-ReadOnly my $NODISP      => 0x20000000;
-ReadOnly my $LOCKED      => 0x40000000;
-ReadOnly my $DELETED     => 0x80000000;
+Readonly my $LOCAL       => 0x00000001;
+Readonly my $INTRANSIT   => 0x00000002;
+Readonly my $PRIVATE     => 0x00000004;
+Readonly my $READ        => 0x00000008;
+Readonly my $SENT        => 0x00000010;
+Readonly my $KILLSENT    => 0x00000020;
+Readonly my $ARCHIVESENT => 0x00000040;
+Readonly my $HOLD        => 0x00000080;
+Readonly my $CRASH       => 0x00000100;
+Readonly my $IMMEDIATE   => 0x00000200;
+Readonly my $DIRECT      => 0x00000400;
+Readonly my $GATE        => 0x00000800;
+Readonly my $FILEREQUEST => 0x00001000;
+Readonly my $FILEATTACH  => 0x00002000;
+Readonly my $TRUNCFILE   => 0x00004000;
+Readonly my $KILLFILE    => 0x00008000;
+Readonly my $RECEIPTREQ  => 0x00010000;
+Readonly my $CONFIRMREQ  => 0x00020000;
+Readonly my $ORPHAN      => 0x00040000;
+Readonly my $ENCRYPT     => 0x00080000;
+Readonly my $COMPRESS    => 0x00100000;
+Readonly my $ESCAPED     => 0x00200000;
+Readonly my $FPU         => 0x00400000;
+Readonly my $TYPELOCAL   => 0x00800000;
+Readonly my $TYPEECHO    => 0x01000000;
+Readonly my $TYPENET     => 0x02000000;
+Readonly my $NODISP      => 0x20000000;
+Readonly my $LOCKED      => 0x40000000;
+Readonly my $DELETED     => 0x80000000;
 
 package FTN::JAM::Errnum;
 
-use ReadOnly;
+use Readonly;
 
-ReadOnly my $IO_ERROR           => 1;
-ReadOnly my $BASE_EXISTS        => 2;
-ReadOnly my $BASEHEADER_CORRUPT => 3;
-ReadOnly my $MSGHEADER_CORRUPT  => 4;
-ReadOnly my $MSGHEADER_UNKNOWN  => 5;
-ReadOnly my $MSG_DELETED        => 6;
-ReadOnly my $BASE_NOT_LOCKED    => 7;
-ReadOnly my $USER_NOT_FOUND     => 8;
+Readonly my $IO_ERROR           => 1;
+Readonly my $BASE_EXISTS        => 2;
+Readonly my $BASEHEADER_CORRUPT => 3;
+Readonly my $MSGHEADER_CORRUPT  => 4;
+Readonly my $MSGHEADER_UNKNOWN  => 5;
+Readonly my $MSG_DELETED        => 6;
+Readonly my $BASE_NOT_LOCKED    => 7;
+Readonly my $USER_NOT_FOUND     => 8;
 
 package FTN::JAM;
 
@@ -156,7 +156,7 @@ sub OpenMB {
             close(JLR);
         }
 
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -210,7 +210,7 @@ sub CreateMB {
     my $hasjlr = ( -e $jampath . ".jlr" );
 
     if ( $hasjdx or $hasjhr or $hasjdt or $hasjlr ) {
-        $Errnum = FTN::JAM::Errnum::BASE_EXISTS;
+        $Errnum = $FTN::JAM::Errnum::BASE_EXISTS;
         return;
     }
 
@@ -233,7 +233,7 @@ sub CreateMB {
             close(JLR);
         }
 
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -326,28 +326,28 @@ sub RemoveMB {
 
     if ($hasjdx) {
         if ( !unlink( $jampath . ".jdx" ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
 
     if ($hasjhr) {
         if ( !unlink( $jampath . ".jhr" ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
 
     if ($hasjdt) {
         if ( !unlink( $jampath . ".jdt" ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
 
     if ($hasjlr) {
         if ( !unlink( $jampath . ".jlr" ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
@@ -387,7 +387,7 @@ sub LockMB {
         }
     }
 
-    $Errnum = FTN::JAM::Errnum::BASE_NOT_LOCKED;
+    $Errnum = $FTN::JAM::Errnum::BASE_NOT_LOCKED;
     return;
 }
 
@@ -429,19 +429,19 @@ sub ReadMBHeader {
     my @data;
 
     if ( !seek( $$handleref{jhr}, 0, 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     if ( read( $$handleref{jhr}, $buf, 1024 ) != 1024 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     @data = unpack( "Z[4]LLLLL", $buf );
 
     if ( $data[0] ne "JAM" ) {
-        $Errnum = FTN::JAM::Errnum::BASEHEADER_CORRUPT;
+        $Errnum = $FTN::JAM::Errnum::BASEHEADER_CORRUPT;
         return;
     }
 
@@ -482,7 +482,7 @@ sub WriteMBHeader {
     if ( !defined( $$headerref{BaseMsgNum} ) ) { $$headerref{BaseMsgNum} = 0; }
 
     if ( !$$handleref{locked} ) {
-        $Errnum = FTN::JAM::Errnum::BASE_NOT_LOCKED;
+        $Errnum = $FTN::JAM::Errnum::BASE_NOT_LOCKED;
         return;
     }
 
@@ -490,7 +490,7 @@ sub WriteMBHeader {
     $$headerref{ModCounter}++;
 
     if ( !seek( $$handleref{jhr}, 0, 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -502,7 +502,7 @@ sub WriteMBHeader {
     );
 
     if ( !$printres ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -527,14 +527,14 @@ sub GetMBSize {
     my @data;
 
     if ( !seek( $$handleref{jdx}, 0, 2 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     my $offset = tell( $$handleref{jdx} );
 
     if ( $offset == -1 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -570,41 +570,41 @@ sub ReadMessage {
 
     if ( !seek( $$handleref{jdx}, ( $msgnum - $mbheader{BaseMsgNum} ) * 8, 0 ) )
     {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     if ( read( $$handleref{jdx}, $buf, 8 ) != 8 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     @data = unpack( "LL", $buf );
 
     if ( $data[0] == 0xffffffff and $data[1] == 0xffffffff ) {
-        $Errnum = FTN::JAM::Errnum::MSG_DELETED;
+        $Errnum = $FTN::JAM::Errnum::MSG_DELETED;
         return;
     }
 
     if ( !seek( $$handleref{jhr}, $data[1], 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     if ( read( $$handleref{jhr}, $buf, 76 ) != 76 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     @data = unpack( "Z[4]SSLLLLLLLLLLLLLLLLL", $buf );
 
     if ( $data[0] ne "JAM" ) {
-        $Errnum = FTN::JAM::Errnum::MSGHEADER_CORRUPT;
+        $Errnum = $FTN::JAM::Errnum::MSGHEADER_CORRUPT;
         return;
     }
 
     if ( $data[1] != 1 ) {
-        $Errnum = FTN::JAM::Errnum::MSGHEADER_UNKNOWN;
+        $Errnum = $FTN::JAM::Errnum::MSGHEADER_UNKNOWN;
         return;
     }
 
@@ -636,7 +636,7 @@ sub ReadMessage {
             read( $$handleref{jhr}, $buf, $$headerref{SubfieldLen} ) !=
             $$headerref{SubfieldLen} )
         {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
@@ -652,7 +652,7 @@ sub ReadMessage {
 
     if ($textref) {
         if ( !seek( $$handleref{jdt}, $$headerref{TxtOffset}, 0 ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
@@ -660,7 +660,7 @@ sub ReadMessage {
             read( $$handleref{jdt}, $$textref, $$headerref{TxtLen} ) !=
             $$headerref{TxtLen} )
         {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
@@ -725,7 +725,7 @@ sub ChangeMessage {
     if ( !defined( $$headerref{Cost} ) ) { $$headerref{Cost} = 0; }
 
     if ( !$$handleref{locked} ) {
-        $Errnum = FTN::JAM::Errnum::BASE_NOT_LOCKED;
+        $Errnum = $FTN::JAM::Errnum::BASE_NOT_LOCKED;
         return;
     }
 
@@ -737,14 +737,14 @@ sub ChangeMessage {
         return;
     }
 
-    if ( ( $$headerref{Attributes} & FTN::JAM::Attr::DELETED ) ) {
+    if ( ( $$headerref{Attributes} & $FTN::JAM::Attr::DELETED ) ) {
         my %oldheader;
 
         if ( !ReadMessage( $handleref, $msgnum, \%oldheader, 0, 0 ) ) {
             return;
         }
 
-        if ( !( $oldheader{Attributes} & FTN::JAM::Attr::DELETED ) ) {
+        if ( !( $oldheader{Attributes} & $FTN::JAM::Attr::DELETED ) ) {
             if ( $mbheader{ActiveMsgs} ) {
                 $mbheader{ActiveMsgs}--;
             }
@@ -753,19 +753,19 @@ sub ChangeMessage {
 
     if ( !seek( $$handleref{jdx}, ( $msgnum - $mbheader{BaseMsgNum} ) * 8, 0 ) )
     {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     if ( read( $$handleref{jdx}, $buf, 8 ) != 8 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     @data = unpack( "LL", $buf );
 
     if ( !seek( $$handleref{jhr}, $data[1], 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -784,7 +784,7 @@ sub ChangeMessage {
     );
 
     if ( !$printres ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -820,21 +820,21 @@ sub AddMessage {
         }
 
         if ( !seek( $$handleref{jdx}, 0, 2 ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
         my $jdxoffset = tell( $$handleref{jdx} );
 
         if ( $jdxoffset == -1 ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
         print { $$handleref{jdx} } pack( "LL", 0xffffffff, 0xffffffff );
 
         if ( !$printres ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
@@ -883,7 +883,7 @@ sub AddMessage {
     if ( !defined( $$headerref{Cost} ) ) { $$headerref{Cost} = 0; }
 
     if ( !$$handleref{locked} ) {
-        $Errnum = FTN::JAM::Errnum::BASE_NOT_LOCKED;
+        $Errnum = $FTN::JAM::Errnum::BASE_NOT_LOCKED;
         return;
     }
 
@@ -899,14 +899,14 @@ sub AddMessage {
 
     if ( $textref and length($$textref) ) {
         if ( !seek( $$handleref{jdt}, 0, 2 ) ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
         my $jdtoffset = tell( $$handleref{jdt} );
 
         if ( $jdtoffset == -1 ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
 
@@ -916,7 +916,7 @@ sub AddMessage {
         $printres = print { $$handleref{jdt} } $$textref;
 
         if ( !$printres ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
@@ -927,15 +927,15 @@ sub AddMessage {
     my $usercrc = 0xffffffff;
 
     for ( my $i = 0 ; $i <= $#$subfieldsref ; $i = $i + 2 ) {
-        if ( $$subfieldsref[$i] == FTN::JAM::Subfields::RECVRNAME ) {
+        if ( $$subfieldsref[$i] == $FTN::JAM::Subfields::RECVRNAME ) {
             $usercrc = Crc32( $$subfieldsref[ $i + 1 ] );
         }
 
-        if ( $$subfieldsref[$i] == FTN::JAM::Subfields::MSGID ) {
+        if ( $$subfieldsref[$i] == $FTN::JAM::Subfields::MSGID ) {
             $$headerref{MsgIdCRC} = Crc32( $$subfieldsref[ $i + 1 ] );
         }
 
-        if ( $$subfieldsref[$i] == FTN::JAM::Subfields::REPLYID ) {
+        if ( $$subfieldsref[$i] == $FTN::JAM::Subfields::REPLYID ) {
             $$headerref{ReplyCRC} = Crc32( $$subfieldsref[ $i + 1 ] );
         }
 
@@ -943,14 +943,14 @@ sub AddMessage {
     }
 
     if ( !seek( $$handleref{jdx}, 0, 2 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     my $jdxoffset = tell( $$handleref{jdx} );
 
     if ( $jdxoffset == -1 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -959,14 +959,14 @@ sub AddMessage {
     $$headerref{Revision}  = 1;
 
     if ( !seek( $$handleref{jhr}, 0, 2 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
     my $jhroffset = tell( $$handleref{jhr} );
 
     if ( $jhroffset == -1 ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -985,7 +985,7 @@ sub AddMessage {
     );
 
     if ( !$printres ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -996,7 +996,7 @@ sub AddMessage {
           $$subfieldsref[ $i + 1 ];
 
         if ( !$printres ) {
-            $Errnum = FTN::JAM::Errnum::IO_ERROR;
+            $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             return;
         }
     }
@@ -1004,15 +1004,15 @@ sub AddMessage {
     $printres = print { $$handleref{jdx} } pack( "LL", $usercrc, $jhroffset );
 
     if ( !$printres ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
-    if ( !( $$headerref{Attributes} & FTN::JAM::Attr::DELETED ) ) {
+    if ( !( $$headerref{Attributes} & $FTN::JAM::Attr::DELETED ) ) {
         $mbheader{ActiveMsgs}++;
     }
 
-    if ( !FTN::JAM::WriteMBHeader( $handleref, \%mbheader ) ) {
+    if ( !$FTN::JAM::WriteMBHeader( $handleref, \%mbheader ) ) {
         return;
     }
 
@@ -1086,7 +1086,7 @@ sub FindUser {
 
     if ( !seek( $$handleref{jdx}, ( $start - $mbheader{BaseMsgNum} ) * 8, 0 ) )
     {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -1098,10 +1098,10 @@ sub FindUser {
     while (1) {
         if ( read( $$handleref{jdx}, $buf, 8 ) != 8 ) {
             if ( eof( $$handleref{jdx} ) ) {
-                $Errnum = FTN::JAM::Errnum::USER_NOT_FOUND;
+                $Errnum = $FTN::JAM::Errnum::USER_NOT_FOUND;
             }
             else {
-                $Errnum = FTN::JAM::Errnum::IO_ERROR;
+                $Errnum = $FTN::JAM::Errnum::IO_ERROR;
             }
 
             return;
@@ -1134,7 +1134,7 @@ sub GetLastRead {
     my $lastreadref = $_[2];
 
     if ( !seek( $$handleref{jlr}, 0, 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -1157,10 +1157,10 @@ sub GetLastRead {
     }
 
     if ( eof( $$handleref{jlr} ) ) {
-        $Errnum = FTN::JAM::Errnum::USER_NOT_FOUND;
+        $Errnum = $FTN::JAM::Errnum::USER_NOT_FOUND;
     }
     else {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
     }
 
     return;
@@ -1191,7 +1191,7 @@ sub SetLastRead {
     }
 
     if ( !seek( $$handleref{jlr}, 0, 0 ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
@@ -1203,7 +1203,7 @@ sub SetLastRead {
 
         if ( $data[1] == $usernum ) {
             if ( !seek( $$handleref{jlr}, -16, 1 ) ) {
-                $Errnum = FTN::JAM::Errnum::IO_ERROR;
+                $Errnum = $FTN::JAM::Errnum::IO_ERROR;
                 return;
             }
 
@@ -1212,7 +1212,7 @@ sub SetLastRead {
                 $$lastreadref{LastReadMsg}, $$lastreadref{HighReadMsg} );
 
             if ( !$printres ) {
-                $Errnum = FTN::JAM::Errnum::IO_ERROR;
+                $Errnum = $FTN::JAM::Errnum::IO_ERROR;
                 return;
             }
 
@@ -1221,7 +1221,7 @@ sub SetLastRead {
     }
 
     if ( !eof( $$handleref{jlr} ) ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
     }
 
     my $printres = print { $$handleref{jlr} } pack( "LLLL",
@@ -1229,7 +1229,7 @@ sub SetLastRead {
         $$lastreadref{LastReadMsg}, $$lastreadref{HighReadMsg} );
 
     if ( !$printres ) {
-        $Errnum = FTN::JAM::Errnum::IO_ERROR;
+        $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
