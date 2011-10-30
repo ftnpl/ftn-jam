@@ -80,8 +80,6 @@ package FTN::JAM;
 
 use Time::Local;
 use Time::Zone;
-use Readonly;
-
 
 use vars qw($Errnum);
 
@@ -95,7 +93,7 @@ Version 0.08
 
 =cut
 
-Readonly our $VERSION => '0.08';
+our $VERSION = '0.08';
 
 =head1 SYNOPSIS
 
