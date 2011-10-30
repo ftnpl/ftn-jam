@@ -89,11 +89,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =cut
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 =head1 SYNOPSIS
 
@@ -136,56 +136,57 @@ sub OpenMB {
     }
 
     my $jampath = $_[0];
+    my ($JHR, $JDX, $JDT, $JLR);
 
-    my $jhrres = open( JHR, q{+<}, $jampath . ".jhr" );
-    my $jdxres = open( JDX, q{+<}, $jampath . ".jdx" );
-    my $jdtres = open( JDT, q{+<}, $jampath . ".jdt" );
-    my $jlrres = open( JLR, q{+<}, $jampath . ".jlr" );
+    my $jhrres = open( $JHR, q{+<}, $jampath . ".jhr" );
+    my $jdxres = open( $JDX, q{+<}, $jampath . ".jdx" );
+    my $jdtres = open( $JDT, q{+<}, $jampath . ".jdt" );
+    my $jlrres = open( $JLR, q{+<}, $jampath . ".jlr" );
 
     if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
         if ($jhrres) {
-            close(JHR);
+            close($JHR);
         }
         if ($jdxres) {
-            close(JDX);
+            close($JDX);
         }
         if ($jdtres) {
-            close(JDT);
+            close($JDT);
         }
         if ($jlrres) {
-            close(JLR);
+            close($JLR);
         }
 
         $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
-    binmode(JHR);
-    binmode(JDX);
-    binmode(JDT);
-    binmode(JLR);
+    binmode($JHR);
+    binmode($JDX);
+    binmode($JDT);
+    binmode($JLR);
 
     my $old;
 
-    $old = select(JHR);
+    $old = select($JHR);
     $|   = 1;
     select($old);
-    $old = select(JDX);
+    $old = select($JDX);
     $|   = 1;
     select($old);
-    $old = select(JDT);
+    $old = select($JDT);
     $|   = 1;
     select($old);
-    $old = select(JLR);
+    $old = select($JLR);
     $|   = 1;
     select($old);
 
     my %filehash;
 
-    $filehash{jhr} = *JHR;
-    $filehash{jdx} = *JDX;
-    $filehash{jdt} = *JDT;
-    $filehash{jlr} = *JLR;
+    $filehash{jhr} = *$JHR;
+    $filehash{jdx} = *$JDX;
+    $filehash{jdt} = *$JDT;
+    $filehash{jlr} = *$JLR;
 
     return \%filehash;
 }
@@ -214,55 +215,57 @@ sub CreateMB {
         return;
     }
 
-    my $jhrres = open( JHR, q{+>}, $jampath . ".jhr" );
-    my $jdxres = open( JDX, q{+>}, $jampath . ".jdx" );
-    my $jdtres = open( JDT, q{+>}, $jampath . ".jdt" );
-    my $jlrres = open( JLR, q{+>}, $jampath . ".jlr" );
+    my ($JHR, $JDX, $JDT, $JLR);
+
+    my $jhrres = open( $JHR, q{+>}, $jampath . ".jhr" );
+    my $jdxres = open( $JDX, q{+>}, $jampath . ".jdx" );
+    my $jdtres = open( $JDT, q{+>}, $jampath . ".jdt" );
+    my $jlrres = open( $JLR, q{+>}, $jampath . ".jlr" );
 
     if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
         if ($jhrres) {
-            close(JHR);
+            close($JHR);
         }
         if ($jdxres) {
-            close(JDX);
+            close($JDX);
         }
         if ($jdtres) {
-            close(JDT);
+            close($JDT);
         }
         if ($jlrres) {
-            close(JLR);
+            close($JLR);
         }
 
         $Errnum = $FTN::JAM::Errnum::IO_ERROR;
         return;
     }
 
-    binmode(JHR);
-    binmode(JDX);
-    binmode(JDT);
-    binmode(JLR);
+    binmode($JHR);
+    binmode($JDX);
+    binmode($JDT);
+    binmode($JLR);
 
     my $old;
 
-    $old = select(JHR);
+    $old = select($JHR);
     $|   = 1;
     select($old);
-    $old = select(JDX);
+    $old = select($JDX);
     $|   = 1;
     select($old);
-    $old = select(JDT);
+    $old = select($JDT);
     $|   = 1;
     select($old);
-    $old = select(JLR);
+    $old = select($JLR);
     $|   = 1;
     select($old);
 
     my %filehash;
 
-    $filehash{jhr} = *JHR;
-    $filehash{jdx} = *JDX;
-    $filehash{jdt} = *JDT;
-    $filehash{jlr} = *JLR;
+    $filehash{jhr} = *$JHR;
+    $filehash{jdx} = *$JDX;
+    $filehash{jdt} = *$JDT;
+    $filehash{jlr} = *$JLR;
 
     my %header;
 

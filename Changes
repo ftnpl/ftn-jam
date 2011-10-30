@@ -1,8 +1,12 @@
 Revision history for ftn-jam
 
+0.10    23:32 29 October 2011
+    - Correct issue with using bareword file handles in the OpenMB and CreateMB
+    functions.  For the OpenMB function, it also resolves bug # 66608.
+
 0.09    21:50 29 October 2011
     - Change the open() calls in JAM.pm from their two argument form to their
-    three argument forms in the OpenMB & CreateMB functions.
+    three argument form in the OpenMB & CreateMB functions.
 
 0.08    21:03 29 October 2011
     - Add ReadOnly to Makefile.PL as a required module.

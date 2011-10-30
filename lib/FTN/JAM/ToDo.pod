@@ -1,23 +1,26 @@
 =head1 FTN::JAM ToDo
 
-Correct issue with the following subroutines not ending with a return:
-CloseMB, UnlockMB, FindUser.
+Verify/ensure that variables passed to subroutines are unpacked to local
+variables before being used in the subroutine.
 
-Correct issue with using bareword file handles (ref also bug # 66608) in
-the OpenMB & CloseMB functions.
+Localize usage of Magic variable "$|".
 
-Correct issue with using 2 argument open() calls instead of 3 argument
-open() in the OpenMB & CloseMB functions.
+Verify/ensure that booleans being used in the same code are of the same
+precedence.
 
-Correct issue with how constants are defined & used: using something like
-ReadOnly instead of the 'constant' pragma?
+Move FTN::JAM::Subfields, FTN::JAM::Attr, and FTN::JAM::Errnum into their
+own module files?
 
 Create a file containing examples of using FTN::JAM, possibly using something
 from the demo scripts as a basis.  Do this instead of simply cleaning up the
-old demo scripts and including them in the distribution?
+old demo scripts and including them in the distribution? Or do some or all
+of both?  I.E.;  add an EXAMPLES section in FTN::JAM and/or a separate file
+such as FTN::JAM::Examples, and have example scripts based on cleaned up demo
+scripts?
 
 Add test subroutines for createing and removing a message base:  for that,
 need to figure out where to put temporary files used with/for/in testing.
+Adapt some and/or all of the demo scripts as part of the testing?
 
 =head1 SEE ALSO
 
