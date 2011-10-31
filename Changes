@@ -1,10 +1,11 @@
 Revision history for FTN-JAM
 
-0.13    18:33 31 October 2011
-    - Start development for v0.13
+0.13    19:23 31 October 2011
+    - Use 'croak' instead of 'die' when checking the number of arguments in the
+    functions in JAM.pm module.
 
 0.12    18:24 31 October 2011
-    - The "$FTN::JAM::WriteMBHeader" in line 1018 of JAM.pm  is a function call,
+    - The "$FTN::JAM::WriteMBHeader" in line 1018 of JAM.pm is a function call,
      not a variable.  Remove the "$" from that, as it is a typo.
 
 0.11    16:22 31 October 2011
