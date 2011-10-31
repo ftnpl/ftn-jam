@@ -143,7 +143,7 @@ sub OpenMB {
     my $jdtres = open( $JDT, q{+<}, $jampath . ".jdt" );
     my $jlrres = open( $JLR, q{+<}, $jampath . ".jlr" );
 
-    if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
+    if ( !$jhrres || !$jdxres || !$jdtres || !$jlrres ) {
         if ($jhrres) {
             close($JHR);
         }
@@ -222,7 +222,7 @@ sub CreateMB {
     my $jdtres = open( $JDT, q{+>}, $jampath . ".jdt" );
     my $jlrres = open( $JLR, q{+>}, $jampath . ".jlr" );
 
-    if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
+    if ( !$jhrres || !$jdxres || !$jdtres || !$jlrres ) {
         if ($jhrres) {
             close($JHR);
         }
