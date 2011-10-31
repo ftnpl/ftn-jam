@@ -1015,7 +1015,7 @@ sub AddMessage {
         $mbheader{ActiveMsgs}++;
     }
 
-    if ( !$FTN::JAM::WriteMBHeader( $handleref, \%mbheader ) ) {
+    if ( !FTN::JAM::WriteMBHeader( $handleref, \%mbheader ) ) {
         return;
     }
 
