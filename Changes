@@ -1,5 +1,8 @@
 Revision history for ftn-jam
 
+0.12    16:40 31 October 2011
+    - Start work on 0.12
+
 0.11    16:22 31 October 2011
     - Because of possible issues with mixed high and low-precedence booleans in
     lines 146 & 225, use '||' instead of 'or'.
