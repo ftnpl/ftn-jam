@@ -89,11 +89,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 =head1 SYNOPSIS
 
@@ -143,7 +143,7 @@ sub OpenMB {
     my $jdtres = open( $JDT, q{+<}, $jampath . ".jdt" );
     my $jlrres = open( $JLR, q{+<}, $jampath . ".jlr" );
 
-    if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
+    if ( !$jhrres || !$jdxres || !$jdtres || !$jlrres ) {
         if ($jhrres) {
             close($JHR);
         }
@@ -222,7 +222,7 @@ sub CreateMB {
     my $jdtres = open( $JDT, q{+>}, $jampath . ".jdt" );
     my $jlrres = open( $JLR, q{+>}, $jampath . ".jlr" );
 
-    if ( !$jhrres or !$jdxres or !$jdtres or !$jlrres ) {
+    if ( !$jhrres || !$jdxres || !$jdtres || !$jlrres ) {
         if ($jhrres) {
             close($JHR);
         }
