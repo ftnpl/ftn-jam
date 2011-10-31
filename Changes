@@ -1,4 +1,7 @@
-Revision history for ftn-jam
+Revision history for FTN-JAM
+
+0.13    18:33 31 October 2011
+    - Start development for v0.13
 
 0.12    18:24 31 October 2011
     - The "$FTN::JAM::WriteMBHeader" in line 1018 of JAM.pm  is a function call,
