@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.14    19:31 31 October 2011
+    - Start dev for 0.14
+
 0.13    19:23 31 October 2011
     - Use 'croak' instead of 'die' when checking the number of arguments in the
     functions in JAM.pm module.
