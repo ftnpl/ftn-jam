@@ -7,74 +7,74 @@ package FTN::JAM::Subfields;
 
 use Readonly;
 
-Readonly my $OADDRESS    => 0;
-Readonly my $DADDRESS    => 1;
-Readonly my $SENDERNAME  => 2;
-Readonly my $RECVRNAME   => 3;
-Readonly my $MSGID       => 4;
-Readonly my $REPLYID     => 5;
-Readonly my $SUBJECT     => 6;
-Readonly my $PID         => 7;
-Readonly my $TRACE       => 8;
-Readonly my $ENCLFILE    => 9;
-Readonly my $ENCLFWALIAS => 10;
-Readonly my $ENCLFREQ    => 11;
-Readonly my $ENCLFILEWC  => 12;
-Readonly my $ENCLINDFILE => 13;
-Readonly my $EMBINDAT    => 1000;
-Readonly my $FTSKLUDGE   => 2000;
-Readonly my $SEENBY2D    => 2001;
-Readonly my $PATH2D      => 2002;
-Readonly my $FLAGS       => 2003;
-Readonly my $TZUTCINFO   => 2004;
-Readonly my $UNKNOWN     => 0xffff;
+Readonly our $OADDRESS    => 0;
+Readonly our $DADDRESS    => 1;
+Readonly our $SENDERNAME  => 2;
+Readonly our $RECVRNAME   => 3;
+Readonly our $MSGID       => 4;
+Readonly our $REPLYID     => 5;
+Readonly our $SUBJECT     => 6;
+Readonly our $PID         => 7;
+Readonly our $TRACE       => 8;
+Readonly our $ENCLFILE    => 9;
+Readonly our $ENCLFWALIAS => 10;
+Readonly our $ENCLFREQ    => 11;
+Readonly our $ENCLFILEWC  => 12;
+Readonly our $ENCLINDFILE => 13;
+Readonly our $EMBINDAT    => 1000;
+Readonly our $FTSKLUDGE   => 2000;
+Readonly our $SEENBY2D    => 2001;
+Readonly our $PATH2D      => 2002;
+Readonly our $FLAGS       => 2003;
+Readonly our $TZUTCINFO   => 2004;
+Readonly our $UNKNOWN     => 0xffff;
 
 package FTN::JAM::Attr;
 
 use Readonly;
 
-Readonly my $LOCAL       => 0x00000001;
-Readonly my $INTRANSIT   => 0x00000002;
-Readonly my $PRIVATE     => 0x00000004;
-Readonly my $READ        => 0x00000008;
-Readonly my $SENT        => 0x00000010;
-Readonly my $KILLSENT    => 0x00000020;
-Readonly my $ARCHIVESENT => 0x00000040;
-Readonly my $HOLD        => 0x00000080;
-Readonly my $CRASH       => 0x00000100;
-Readonly my $IMMEDIATE   => 0x00000200;
-Readonly my $DIRECT      => 0x00000400;
-Readonly my $GATE        => 0x00000800;
-Readonly my $FILEREQUEST => 0x00001000;
-Readonly my $FILEATTACH  => 0x00002000;
-Readonly my $TRUNCFILE   => 0x00004000;
-Readonly my $KILLFILE    => 0x00008000;
-Readonly my $RECEIPTREQ  => 0x00010000;
-Readonly my $CONFIRMREQ  => 0x00020000;
-Readonly my $ORPHAN      => 0x00040000;
-Readonly my $ENCRYPT     => 0x00080000;
-Readonly my $COMPRESS    => 0x00100000;
-Readonly my $ESCAPED     => 0x00200000;
-Readonly my $FPU         => 0x00400000;
-Readonly my $TYPELOCAL   => 0x00800000;
-Readonly my $TYPEECHO    => 0x01000000;
-Readonly my $TYPENET     => 0x02000000;
-Readonly my $NODISP      => 0x20000000;
-Readonly my $LOCKED      => 0x40000000;
-Readonly my $DELETED     => 0x80000000;
+Readonly our $LOCAL       => 0x00000001;
+Readonly our $INTRANSIT   => 0x00000002;
+Readonly our $PRIVATE     => 0x00000004;
+Readonly our $READ        => 0x00000008;
+Readonly our $SENT        => 0x00000010;
+Readonly our $KILLSENT    => 0x00000020;
+Readonly our $ARCHIVESENT => 0x00000040;
+Readonly our $HOLD        => 0x00000080;
+Readonly our $CRASH       => 0x00000100;
+Readonly our $IMMEDIATE   => 0x00000200;
+Readonly our $DIRECT      => 0x00000400;
+Readonly our $GATE        => 0x00000800;
+Readonly our $FILEREQUEST => 0x00001000;
+Readonly our $FILEATTACH  => 0x00002000;
+Readonly our $TRUNCFILE   => 0x00004000;
+Readonly our $KILLFILE    => 0x00008000;
+Readonly our $RECEIPTREQ  => 0x00010000;
+Readonly our $CONFIRMREQ  => 0x00020000;
+Readonly our $ORPHAN      => 0x00040000;
+Readonly our $ENCRYPT     => 0x00080000;
+Readonly our $COMPRESS    => 0x00100000;
+Readonly our $ESCAPED     => 0x00200000;
+Readonly our $FPU         => 0x00400000;
+Readonly our $TYPELOCAL   => 0x00800000;
+Readonly our $TYPEECHO    => 0x01000000;
+Readonly our $TYPENET     => 0x02000000;
+Readonly our $NODISP      => 0x20000000;
+Readonly our $LOCKED      => 0x40000000;
+Readonly our $DELETED     => 0x80000000;
 
 package FTN::JAM::Errnum;
 
 use Readonly;
 
-Readonly my $IO_ERROR           => 1;
-Readonly my $BASE_EXISTS        => 2;
-Readonly my $BASEHEADER_CORRUPT => 3;
-Readonly my $MSGHEADER_CORRUPT  => 4;
-Readonly my $MSGHEADER_UNKNOWN  => 5;
-Readonly my $MSG_DELETED        => 6;
-Readonly my $BASE_NOT_LOCKED    => 7;
-Readonly my $USER_NOT_FOUND     => 8;
+Readonly our $IO_ERROR           => 1;
+Readonly our $BASE_EXISTS        => 2;
+Readonly our $BASEHEADER_CORRUPT => 3;
+Readonly our $MSGHEADER_CORRUPT  => 4;
+Readonly our $MSGHEADER_UNKNOWN  => 5;
+Readonly our $MSG_DELETED        => 6;
+Readonly our $BASE_NOT_LOCKED    => 7;
+Readonly our $USER_NOT_FOUND     => 8;
 
 package FTN::JAM;
 
@@ -90,11 +90,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.13
+Version 0.14
 
 =cut
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 =head1 SYNOPSIS
 
