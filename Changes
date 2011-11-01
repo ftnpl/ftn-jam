@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.15    00:51  1 November 2011
+    - Start development of v0.15
+
 0.14    00:35  1 November 2011
     - Use 'our' instead of 'my' when setting the Readonly variables in JAM.pm.
 
