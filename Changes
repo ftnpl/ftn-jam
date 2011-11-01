@@ -1,7 +1,7 @@
 Revision history for FTN-JAM
 
-0.14    19:31 31 October 2011
-    - Start dev for 0.14
+0.14    00:35  1 November 2011
+    - Use 'our' instead of 'my' when setting the Readonly variables in JAM.pm.
 
 0.13    19:23 31 October 2011
     - Use 'croak' instead of 'die' when checking the number of arguments in the
