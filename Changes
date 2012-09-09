@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.19    12:29  9 September 2012
+    - Start development for v0.19
+
 0.18    12:25  9 September 2012
     - Move package FTN::JAM::Errnum into its own file.
     - Add lib/FTN/JAM/Errnum.pm to MANIFEST.
