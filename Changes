@@ -1,7 +1,9 @@
 Revision history for FTN-JAM
 
-0.19    12:29  9 September 2012
-    - Start development for v0.19
+0.19    14:55  9 September 2012
+    - Rearrange version information and POD in lib/FTN/JAM/Attr.pm.
+    - Minor whitespace clean up plus update configuration for clean and dist
+      targets in Makefile.PL.
 
 0.18    12:25  9 September 2012
     - Move package FTN::JAM::Errnum into its own file.
