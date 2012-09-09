@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.16    hh:mm  9 September 2012
+    - Start development for version v0.16.
+
 0.15    07:52  9 September 2012
     - Create initial version of the t/01-basic.t test script.
     - Update Robert James Clay copyright years to include 2012.
