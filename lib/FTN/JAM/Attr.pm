@@ -1,9 +1,28 @@
 # FTN::JAM::Attr
 
+package FTN::JAM::Attr;
+
 use warnings;
 use strict;
 
-package FTN::JAM::Attr;
+=head1 NAME
+
+FTN::JAM - A Perl extension for handleing JAM messagebase Attribute references.
+
+=head1 VERSION
+
+Version 0.19
+
+=cut
+
+our $VERSION = '0.19';
+
+=head1 DESCRIPTION
+
+This module contains the read only constants used for referenceing attributes when accessing
+JAM messagebases.
+
+=cut
 
 use Readonly;
 
@@ -36,23 +55,6 @@ Readonly our $TYPENET     => 0x02000000;
 Readonly our $NODISP      => 0x20000000;
 Readonly our $LOCKED      => 0x40000000;
 Readonly our $DELETED     => 0x80000000;
-
-=head1 NAME
-
-FTN::JAM - A Perl extension for handleing JAM messagebase Attribute references.
-
-=head1 VERSION
-
-Version 0.19
-
-=cut
-
-our $VERSION = '0.19';
-
-=head1 DESCRIPTION
-
-This module contains the read only constants used for referenceing attributes when accessing
-JAM messagebases.
 
 =head1 AUTHOR
 
