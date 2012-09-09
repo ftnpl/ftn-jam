@@ -1,22 +1,9 @@
 # FTN::JAM
 
+package FTN::JAM;
+
 use warnings;
 use strict;
-
-package FTN::JAM::Errnum;
-
-use Readonly;
-
-Readonly our $IO_ERROR           => 1;
-Readonly our $BASE_EXISTS        => 2;
-Readonly our $BASEHEADER_CORRUPT => 3;
-Readonly our $MSGHEADER_CORRUPT  => 4;
-Readonly our $MSGHEADER_UNKNOWN  => 5;
-Readonly our $MSG_DELETED        => 6;
-Readonly our $BASE_NOT_LOCKED    => 7;
-Readonly our $USER_NOT_FOUND     => 8;
-
-package FTN::JAM;
 
 use Carp;
 use Time::Local;
@@ -30,11 +17,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.17
+Version 0.18
 
 =cut
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 =head1 SYNOPSIS
 

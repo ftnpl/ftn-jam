@@ -4,6 +4,7 @@ Makefile.PL
 README
 lib/FTN/JAM.pm
 lib/FTN/JAM/Attr.pm
+lib/FTN/JAM/Errnum.pm
 lib/FTN/JAM/Subfields.pm
 lib/FTN/JAM/ToDo.pod
 t/00-load.t
