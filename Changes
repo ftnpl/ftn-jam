@@ -1,7 +1,9 @@
 Revision history for FTN-JAM
 
-0.20    15:46  9 September 2012
-    - Start development of v0.20
+0.20    19:42  9 September 2012
+    - Create initial version of t/manifest.t test script.
+    - Add t/manifest.t and t/01-basic.t to the MANIFEST file.
+    - Correct the URL for browsing the FTN::JAM git repository at SourceForge.
 
 0.19    14:55  9 September 2012
     - Rearrange version information and POD in lib/FTN/JAM/Attr.pm.
