@@ -1,6 +1,9 @@
 Revision history for FTN-JAM
 
-0.16    09:m25  9 September 2012
+0.17    hh:mm  9 September 2012
+    - Start development for v0.17
+
+0.16    09:25  9 September 2012
     - Move package FTN::JAM::Subfields into its own file.
     - Add lib/FTN/JAM/Subfields.pm to MANIFEST.
     - Add lib/FTN/JAM/Subfields.pm to t/00-load.t.
