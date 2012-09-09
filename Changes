@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.18    hh:mm  9 September 2012
+    - Start development for v0.18
+
 0.17    11:25  9 September 2012
     - Move package FTN::JAM::Attr into its own file.
     - Add lib/FTN/JAM/Attr.pm to MANIFEST.

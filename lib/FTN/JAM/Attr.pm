@@ -43,11 +43,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebase Attribute references.
 
 =head1 VERSION
 
-Version 0.17
+Version 0.18
 
 =cut
 
-our $VERSION = '0.17';
+our $VERSION = '0.18';
 
 =head1 DESCRIPTION
 
