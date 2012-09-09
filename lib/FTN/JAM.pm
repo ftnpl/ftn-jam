@@ -90,11 +90,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.14
+Version 0.15
 
 =cut
 
-our $VERSION = '0.14';
+our $VERSION = '0.15';
 
 =head1 SYNOPSIS
 
@@ -1325,7 +1325,7 @@ can be found at L<https://bitbucket.org/johanbilling/jampm/overview>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2010-2011 Robert James Clay, all rights reserved.
+Copyright 2010-2012 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
