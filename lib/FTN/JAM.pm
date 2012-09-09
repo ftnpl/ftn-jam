@@ -3,32 +3,6 @@
 use warnings;
 use strict;
 
-package FTN::JAM::Subfields;
-
-use Readonly;
-
-Readonly our $OADDRESS    => 0;
-Readonly our $DADDRESS    => 1;
-Readonly our $SENDERNAME  => 2;
-Readonly our $RECVRNAME   => 3;
-Readonly our $MSGID       => 4;
-Readonly our $REPLYID     => 5;
-Readonly our $SUBJECT     => 6;
-Readonly our $PID         => 7;
-Readonly our $TRACE       => 8;
-Readonly our $ENCLFILE    => 9;
-Readonly our $ENCLFWALIAS => 10;
-Readonly our $ENCLFREQ    => 11;
-Readonly our $ENCLFILEWC  => 12;
-Readonly our $ENCLINDFILE => 13;
-Readonly our $EMBINDAT    => 1000;
-Readonly our $FTSKLUDGE   => 2000;
-Readonly our $SEENBY2D    => 2001;
-Readonly our $PATH2D      => 2002;
-Readonly our $FLAGS       => 2003;
-Readonly our $TZUTCINFO   => 2004;
-Readonly our $UNKNOWN     => 0xffff;
-
 package FTN::JAM::Attr;
 
 use Readonly;
@@ -90,11 +64,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.15
+Version 0.16
 
 =cut
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 =head1 SYNOPSIS
 

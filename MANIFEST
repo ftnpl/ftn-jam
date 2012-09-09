@@ -3,6 +3,7 @@ MANIFEST
 Makefile.PL
 README
 lib/FTN/JAM.pm
+lib/FTN/JAM/Subfields.pm
 lib/FTN/JAM/ToDo.pod
 t/00-load.t
 t/pod-coverage.t
