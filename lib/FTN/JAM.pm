@@ -3,40 +3,6 @@
 use warnings;
 use strict;
 
-package FTN::JAM::Attr;
-
-use Readonly;
-
-Readonly our $LOCAL       => 0x00000001;
-Readonly our $INTRANSIT   => 0x00000002;
-Readonly our $PRIVATE     => 0x00000004;
-Readonly our $READ        => 0x00000008;
-Readonly our $SENT        => 0x00000010;
-Readonly our $KILLSENT    => 0x00000020;
-Readonly our $ARCHIVESENT => 0x00000040;
-Readonly our $HOLD        => 0x00000080;
-Readonly our $CRASH       => 0x00000100;
-Readonly our $IMMEDIATE   => 0x00000200;
-Readonly our $DIRECT      => 0x00000400;
-Readonly our $GATE        => 0x00000800;
-Readonly our $FILEREQUEST => 0x00001000;
-Readonly our $FILEATTACH  => 0x00002000;
-Readonly our $TRUNCFILE   => 0x00004000;
-Readonly our $KILLFILE    => 0x00008000;
-Readonly our $RECEIPTREQ  => 0x00010000;
-Readonly our $CONFIRMREQ  => 0x00020000;
-Readonly our $ORPHAN      => 0x00040000;
-Readonly our $ENCRYPT     => 0x00080000;
-Readonly our $COMPRESS    => 0x00100000;
-Readonly our $ESCAPED     => 0x00200000;
-Readonly our $FPU         => 0x00400000;
-Readonly our $TYPELOCAL   => 0x00800000;
-Readonly our $TYPEECHO    => 0x01000000;
-Readonly our $TYPENET     => 0x02000000;
-Readonly our $NODISP      => 0x20000000;
-Readonly our $LOCKED      => 0x40000000;
-Readonly our $DELETED     => 0x80000000;
-
 package FTN::JAM::Errnum;
 
 use Readonly;
@@ -64,11 +30,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.16
+Version 0.17
 
 =cut
 
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 =head1 SYNOPSIS
 

@@ -1,9 +1,10 @@
 #!perl -T
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 
 BEGIN {
     use_ok( 'FTN::JAM' );
+    use_ok( 'FTN::JAM::Attr' );
     use_ok( 'FTN::JAM::Subfields' );
 }
 

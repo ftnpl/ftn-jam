@@ -1,13 +1,45 @@
-# FTN::JAM::Subfields
-
-package FTN::JAM::Subfields;
+# FTN::JAM::Attr
 
 use warnings;
 use strict;
 
+package FTN::JAM::Attr;
+
+use Readonly;
+
+Readonly our $LOCAL       => 0x00000001;
+Readonly our $INTRANSIT   => 0x00000002;
+Readonly our $PRIVATE     => 0x00000004;
+Readonly our $READ        => 0x00000008;
+Readonly our $SENT        => 0x00000010;
+Readonly our $KILLSENT    => 0x00000020;
+Readonly our $ARCHIVESENT => 0x00000040;
+Readonly our $HOLD        => 0x00000080;
+Readonly our $CRASH       => 0x00000100;
+Readonly our $IMMEDIATE   => 0x00000200;
+Readonly our $DIRECT      => 0x00000400;
+Readonly our $GATE        => 0x00000800;
+Readonly our $FILEREQUEST => 0x00001000;
+Readonly our $FILEATTACH  => 0x00002000;
+Readonly our $TRUNCFILE   => 0x00004000;
+Readonly our $KILLFILE    => 0x00008000;
+Readonly our $RECEIPTREQ  => 0x00010000;
+Readonly our $CONFIRMREQ  => 0x00020000;
+Readonly our $ORPHAN      => 0x00040000;
+Readonly our $ENCRYPT     => 0x00080000;
+Readonly our $COMPRESS    => 0x00100000;
+Readonly our $ESCAPED     => 0x00200000;
+Readonly our $FPU         => 0x00400000;
+Readonly our $TYPELOCAL   => 0x00800000;
+Readonly our $TYPEECHO    => 0x01000000;
+Readonly our $TYPENET     => 0x02000000;
+Readonly our $NODISP      => 0x20000000;
+Readonly our $LOCKED      => 0x40000000;
+Readonly our $DELETED     => 0x80000000;
+
 =head1 NAME
 
-FTN::JAM::Subfields - A Perl extension for handleing JAM messagebase Subfield references.
+FTN::JAM - A Perl extension for handleing JAM messagebase Attribute references.
 
 =head1 VERSION
 
@@ -19,34 +51,8 @@ our $VERSION = '0.17';
 
 =head1 DESCRIPTION
 
-This module contains the read only constants used for referenceing subfields when accessing
+This module contains the read only constants used for referenceing attributes when accessing
 JAM messagebases.
-
-=cut
-
-use Readonly;
-
-Readonly our $OADDRESS    => 0;
-Readonly our $DADDRESS    => 1;
-Readonly our $SENDERNAME  => 2;
-Readonly our $RECVRNAME   => 3;
-Readonly our $MSGID       => 4;
-Readonly our $REPLYID     => 5;
-Readonly our $SUBJECT     => 6;
-Readonly our $PID         => 7;
-Readonly our $TRACE       => 8;
-Readonly our $ENCLFILE    => 9;
-Readonly our $ENCLFWALIAS => 10;
-Readonly our $ENCLFREQ    => 11;
-Readonly our $ENCLFILEWC  => 12;
-Readonly our $ENCLINDFILE => 13;
-Readonly our $EMBINDAT    => 1000;
-Readonly our $FTSKLUDGE   => 2000;
-Readonly our $SEENBY2D    => 2001;
-Readonly our $PATH2D      => 2002;
-Readonly our $FLAGS       => 2003;
-Readonly our $TZUTCINFO   => 2004;
-Readonly our $UNKNOWN     => 0xffff;
 
 =head1 AUTHOR
 
@@ -62,7 +68,7 @@ then you'll automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc FTN::JAM::Subfields
+    perldoc FTN::JAM::Attr
 
 You can also look for information at:
 
@@ -101,7 +107,7 @@ can be found at L<https://bitbucket.org/johanbilling/jampm/overview>.
 
 =head1 SEE ALSO
 
- L<FTN::JAM::ToDo>, L<FTN::JAM::Examples>
+ L<FTN::JAM>, L<FTN::JAM::Examples>
 
 =head1 COPYRIGHT & LICENSE
 
@@ -112,4 +118,4 @@ under the same terms as Perl itself.
 
 =cut
 
-1;    # End of FTN::JAM::Subfields
+1;    # End of FTN::JAM::Attr
