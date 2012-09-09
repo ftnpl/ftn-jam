@@ -1,30 +1,80 @@
 =head1 FTN::JAM ToDo
 
+Adapt some and/or all of the demo scripts to be distributed with the
+distribution? At least update for use with the current FTN::JAM module.
+Then add POD documentation including license and copyright information
+and then add them to the distribution (but not yet to an installation).
+
+
+=head2 Testing
+
+Add message specific testing; adding a messsge, retrieveing a message, etc.
+
+Add a note{} to the new test script instead of the comment regarding basic
+operations.
+
+
+=head2 FTN::JAM
+
+One argument selects are used at multiple places in JAM.pm.  It's being 
+used to change which of the JAM data files is being printed to at various
+parts of the code.  Since at least some of those are one line after another,
+not sure why the four different file pointers were just explicitly used
+instead of switching back and fourth.
+
 Verify/ensure that variables passed to subroutines are unpacked to local
 variables before being used in the subroutine.
 
+Change the format of the subroutine names from like OpenMB to something like
+open_messagebase, amongst other reasons that it makes it clearer what is
+being referred to.
+
 Localize usage of Magic variable "$|".
 
-Verify/ensure that booleans being used in the same code are of the same
-precedence.
+Multiple issues with @_ not being unpacked at the beginning of a function.
 
-Move FTN::JAM::Subfields, FTN::JAM::Attr, and FTN::JAM::Errnum into their
-own module files?
+A messagebase packing function is not directly available. It could be done
+by creation of a temporary messagebase, copying the messages from the one
+being packed to the temporary one, removing the original version of the
+messagebase, then renaming the temporary one to original name. Or by
+renaming the message base to a temporary name, recreating the messagebase,
+then copying the messages from the temporary version to the new version.
+(Might be issues either way.)  If do not add as a function, add it as an
+example.
+
+
+=head2 FTN::JAM::Subfields
+
+Expand and update the POD documenation for the read only constants in the file.
+
+
+=head2 FTN::JAM::Attr
+
+Expand and update the POD documenation for the read only constants in the file.
+
+
+=head2 FTN::JAM::Errnum
+
+Expand and update the POD documenation for the read only constants in the file.
+
+
+=head2 FTN::JAM::Examples
 
 Create a file containing examples of using FTN::JAM, possibly using something
 from the demo scripts as a basis.  Do this instead of simply cleaning up the
 old demo scripts and including them in the distribution? Or do some or all
 of both?  I.E.;  add an EXAMPLES section in FTN::JAM and/or a separate file
 such as FTN::JAM::Examples, and have example scripts based on cleaned up demo
-scripts?
+scripts?  Or create possibly separte ftnjam distribution that provides a
+script that both does some basic operations on JAM message bases as well
+as serving as an example of how to use FTN::JAM.
 
-Add test subroutines for createing and removing a message base:  for that,
-need to figure out where to put temporary files used with/for/in testing.
-Adapt some and/or all of the demo scripts as part of the testing?
 
 =head1 SEE ALSO
 
- L<FTN::JAM>, L<FTN::JAM::Examples>
+ L<FTN::JAM>, L<FTN::JAM::Subfields>, L<FTN::JAM::Attr>, L<FTN::JAM::Errnum>,
+ L<FTN::JAM::Examples>, and L<FTN::JAM::ToDo>
+
 
 =head1 AUTHOR
 
