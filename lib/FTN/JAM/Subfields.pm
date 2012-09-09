@@ -74,7 +74,7 @@ L<http://ftnpl.sourceforge.net/ftnpljam.html>
 
 =item * Browse the FTN::JAM GIT repository at SourceForge
 
-L<http://ftnpl.git.sourceforge.net/git/gitweb.cgi?p=ftnpl/ftn-jam.git>
+L<http://sourceforge.net/p/ftnpl/ftn-jam/code>
 
 =item * RT: CPAN's request tracker
 
