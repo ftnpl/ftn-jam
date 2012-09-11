@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.21    hh:mm dd month 2012
+    - Start development for v0.21
+
 0.20    19:42  9 September 2012
     - Create initial version of t/manifest.t test script.
     - Add t/manifest.t and t/01-basic.t to the MANIFEST file.
