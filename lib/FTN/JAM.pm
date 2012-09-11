@@ -97,16 +97,16 @@ sub OpenMB {
     my $old;
 
     $old = select($JHR);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JDX);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JDT);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JLR);
-    $|   = 1;
+    local $|   = 1;
     select($old);
 
     my %filehash;
@@ -176,16 +176,16 @@ sub CreateMB {
     my $old;
 
     $old = select($JHR);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JDX);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JDT);
-    $|   = 1;
+    local $|   = 1;
     select($old);
     $old = select($JLR);
-    $|   = 1;
+    local $|   = 1;
     select($old);
 
     my %filehash;
