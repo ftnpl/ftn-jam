@@ -1,7 +1,7 @@
 Revision history for FTN-JAM
 
-0.22    18:08 11 September 2012
-    - Start development of version 0.22
+0.22    18:33 11 September 2012
+    - Localize usage of the Magic $| variable.
 
 0.21    17:34 11 September 2012
     - Correct NAME section in POD for FTN::JAM::Attr.
