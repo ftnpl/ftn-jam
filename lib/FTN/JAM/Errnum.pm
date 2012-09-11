@@ -8,7 +8,7 @@ use strict;
 
 =head1 NAME
 
-FTN::JAM - A Perl extension for handleing JAM messagebases.
+FTN::JAM::Errnum - A Perl extension for handling JAM messagebase Error Number references.
 
 =head1 VERSION
 
