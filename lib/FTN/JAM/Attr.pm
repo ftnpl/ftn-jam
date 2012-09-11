@@ -7,7 +7,7 @@ use strict;
 
 =head1 NAME
 
-FTN::JAM - A Perl extension for handleing JAM messagebase Attribute references.
+FTN::JAM::Attr - A Perl extension for handling JAM messagebase Attribute references.
 
 =head1 VERSION
 
