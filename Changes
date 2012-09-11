@@ -1,5 +1,9 @@
 Revision history for FTN-JAM
 
+0.21    17:34 11 September 2012
+    - Correct NAME section in POD for FTN::JAM::Attr.
+    - Rewrite NAME section in POD for FTN::JAM::Errnum.
+
 0.20    19:42  9 September 2012
     - Create initial version of t/manifest.t test script.
     - Add t/manifest.t and t/01-basic.t to the MANIFEST file.
