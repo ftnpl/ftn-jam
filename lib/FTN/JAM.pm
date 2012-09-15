@@ -236,7 +236,7 @@ sub CloseMB {
     close( $$handleref{jdt} ) or croak "Unable to close: $!";
     close( $$handleref{jlr} ) or croak "Unable to close: $!";
 
-    return;
+    return 1;
 }
 
 =head2 RemoveMB
