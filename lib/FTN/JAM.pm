@@ -229,7 +229,7 @@ Syntax: FTN::JAM::CloseMB($handle)
 
 sub CloseMB {
 
-    my $handleref = $_[0];
+    my ($handleref) = @_ or croak 'CloseMB requires a hash reference parameter.';
 
     close( $$handleref{jdx} ) or croak "Unable to close: $!";
     close( $$handleref{jhr} ) or croak "Unable to close: $!";
