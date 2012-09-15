@@ -9,7 +9,7 @@ use Carp;
 use Time::Local;
 use Time::Zone;
 
-use vars qw($Errnum);
+our $Errnum;
 
 =head1 NAME
 
