@@ -15,11 +15,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.24
+Version 0.25
 
 =cut
 
-our $VERSION = '0.24';
+our $VERSION = '0.25';
 
 =head1 SYNOPSIS
 
@@ -64,11 +64,9 @@ Syntax: $handle = FTN::JAM::OpenMB($jampath)
 =cut
 
 sub OpenMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::OpenMB";
-    }
 
-    my $jampath = $_[0];
+    my $jampath = @_ or croak 'OpenMB requires a base file name and path as a parameter.';
+
     my ($JHR, $JDX, $JDT, $JLR);
 
     my $jhrres = open( $JHR, q{+<}, $jampath . ".jhr" );
