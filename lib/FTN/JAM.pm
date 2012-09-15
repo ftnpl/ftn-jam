@@ -15,11 +15,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.23
+Version 0.24
 
 =cut
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 =head1 SYNOPSIS
 
@@ -228,18 +228,15 @@ Syntax: FTN::JAM::CloseMB($handle)
 =cut
 
 sub CloseMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::CloseMB";
-    }
 
-    my $handleref = $_[0];
+    my ($handleref) = @_ or croak 'CloseMB requires a hash reference parameter.';
 
-    close( $$handleref{jdx} );
-    close( $$handleref{jhr} );
-    close( $$handleref{jdt} );
-    close( $$handleref{jlr} );
+    close( $$handleref{jdx} ) or croak "Unable to close: $!";
+    close( $$handleref{jhr} ) or croak "Unable to close: $!";
+    close( $$handleref{jdt} ) or croak "Unable to close: $!";
+    close( $$handleref{jlr} ) or croak "Unable to close: $!";
 
-    return;
+    return 1;
 }
 
 =head2 RemoveMB

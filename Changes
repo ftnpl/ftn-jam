@@ -1,5 +1,13 @@
 Revision history for FTN-JAM
 
+0.24    18:13 15 September 2012
+    Changes for CloseMB:
+    - Use 'close FH or croak' style for all file closeing.
+    - Have the function fail if it isn't passed a parameter.
+    - Remove the unneeded code that was checking the number of parameters.
+    - Explicitly return true for a normal exit using a '1' and rewrite the test
+      in t/01-basic.t to reflect that.
+
 0.23    13:08 15 September 2012
     - Change the declaration for $Errnum from the deprecated 'use vars' to 'our'.
     - Move the declaration for $Errnum to just before the functions in JAM.pm.
