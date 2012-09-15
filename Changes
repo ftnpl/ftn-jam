@@ -1,8 +1,10 @@
 Revision history for FTN-JAM
 
-0.25    18:17 15 September 2012
+0.25    18:52 15 September 2012
     Changes for OpenMB:
-    - Start development for v0.25
+    - Remove the old code that was checking the number of parameters.
+    - Change the initial local parameter assignment to fail if the function
+      isn't passed a parameter.
 
 0.24    18:13 15 September 2012
     Changes for CloseMB:
