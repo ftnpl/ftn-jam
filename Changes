@@ -1,5 +1,10 @@
 Revision history for FTN-JAM
 
+0.23    13:08 15 September 2012
+    - Change the declaration for $Errnum from the deprecated 'use vars' to 'our'.
+    - Move the declaration for $Errnum to just before the functions in JAM.pm.
+    - Add a note regarding the $Errnum global variable to POD documentation.
+
 0.22    18:33 11 September 2012
     - Localize usage of the Magic $| variable.
 

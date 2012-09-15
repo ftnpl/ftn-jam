@@ -9,19 +9,17 @@ use Carp;
 use Time::Local;
 use Time::Zone;
 
-use vars qw($Errnum);
-
 =head1 NAME
 
 FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.22
+Version 0.23
 
 =cut
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 =head1 SYNOPSIS
 
@@ -49,6 +47,13 @@ The following functions are available in the module:  OpenMB, CreateMB, CloseMB,
 RemoveMB, LockMB, UnlockMB, ReadMBHeader, WriteMBHeader, GetMBSize, ReadMessage,
 ChangeMessage, AddMessage, Crc32, FindUser, GetLastRead, SetLastRead, TimeToLocal,
 and LocalToTime.
+
+The global variable $Errnum is used for returning error numbers from functions 
+and can be accessed as $FTN::JAM::Errnum. It defaults to undefined.
+
+=cut
+
+our $Errnum;
 
 =head1 FUNCTIONS
 
