@@ -11,11 +11,11 @@ FTN::JAM::Attr - A Perl extension for handling JAM messagebase Attribute referen
 
 =head1 VERSION
 
-Version 0.22
+Version 0.23
 
 =cut
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.23    12:19 15 September 2012
+    - Start development for v0.23
+
 0.22    18:33 11 September 2012
     - Localize usage of the Magic $| variable.
 
