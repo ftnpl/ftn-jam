@@ -228,9 +228,6 @@ Syntax: FTN::JAM::CloseMB($handle)
 =cut
 
 sub CloseMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::CloseMB";
-    }
 
     my $handleref = $_[0];
 
