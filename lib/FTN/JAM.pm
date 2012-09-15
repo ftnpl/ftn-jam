@@ -231,10 +231,10 @@ sub CloseMB {
 
     my $handleref = $_[0];
 
-    close( $$handleref{jdx} );
-    close( $$handleref{jhr} );
-    close( $$handleref{jdt} );
-    close( $$handleref{jlr} );
+    close( $$handleref{jdx} ) or croak "Unable to close: $!";
+    close( $$handleref{jhr} ) or croak "Unable to close: $!";
+    close( $$handleref{jdt} ) or croak "Unable to close: $!";
+    close( $$handleref{jlr} ) or croak "Unable to close: $!";
 
     return;
 }
