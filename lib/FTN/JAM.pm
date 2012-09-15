@@ -9,8 +9,6 @@ use Carp;
 use Time::Local;
 use Time::Zone;
 
-our $Errnum;
-
 =head1 NAME
 
 FTN::JAM - A Perl extension for handleing JAM messagebases.
@@ -49,6 +47,10 @@ The following functions are available in the module:  OpenMB, CreateMB, CloseMB,
 RemoveMB, LockMB, UnlockMB, ReadMBHeader, WriteMBHeader, GetMBSize, ReadMessage,
 ChangeMessage, AddMessage, Crc32, FindUser, GetLastRead, SetLastRead, TimeToLocal,
 and LocalToTime.
+
+=cut
+
+our $Errnum;
 
 =head1 FUNCTIONS
 
