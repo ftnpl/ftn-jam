@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.24    16:22 15 September 2012
+    - Start development for v0.24
+
 0.23    13:08 15 September 2012
     - Change the declaration for $Errnum from the deprecated 'use vars' to 'our'.
     - Move the declaration for $Errnum to just before the functions in JAM.pm.
