@@ -48,6 +48,9 @@ RemoveMB, LockMB, UnlockMB, ReadMBHeader, WriteMBHeader, GetMBSize, ReadMessage,
 ChangeMessage, AddMessage, Crc32, FindUser, GetLastRead, SetLastRead, TimeToLocal,
 and LocalToTime.
 
+The global variable $Errnum is used for returning error numbers from functions 
+and can be accessed as $FTN::JAM::Errnum. It defaults to undefined.
+
 =cut
 
 our $Errnum;
