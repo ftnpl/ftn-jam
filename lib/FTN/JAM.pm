@@ -64,9 +64,6 @@ Syntax: $handle = FTN::JAM::OpenMB($jampath)
 =cut
 
 sub OpenMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::OpenMB";
-    }
 
     my $jampath = $_[0];
     my ($JHR, $JDX, $JDT, $JLR);
