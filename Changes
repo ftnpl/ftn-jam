@@ -1,8 +1,10 @@
 Revision history for FTN-JAM
 
-0.26    09:16 16 September 2012
-    Changes for LockMB:
+0.27    10:01 16 September 2012
+    Changes for UnlockMB:
     - Remove the old code that was checking the number of parameters.
+    - Change the initial local parameter assignment to fail if the function
+      isn't passed a parameter.
 
 0.26    09:08 16 September 2012
     Changes for RemoveMB:
