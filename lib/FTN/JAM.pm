@@ -951,9 +951,6 @@ Syntax: $crc32 = FTN::JAM::Crc32($data)
 =cut
 
 sub Crc32 {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::Crc32";
-    }
 
     my $data = $_[0];
 
