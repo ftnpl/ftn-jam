@@ -326,9 +326,6 @@ Syntax: FTN::JAM::UnlockMB($handle)
 =cut
 
 sub UnlockMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::UnlockMB";
-    }
 
     my $handleref = $_[0];
 
