@@ -1,7 +1,8 @@
 Revision history for FTN-JAM
 
-0.30    hh:mm dd September 2012
-    - Start development for v0.30
+0.30    16:49 dd September 2012
+    - Add parentheses to the parameter localization in the RemoveMB, OpenMB,
+      and Crc32 functions.
 
 0.29    13:20 16 September 2012
     Changes for UnlockMB:
