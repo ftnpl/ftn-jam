@@ -1,8 +1,10 @@
 Revision history for FTN-JAM
 
-0.26    08:59 16 September 2012
+0.26    09:08 16 September 2012
     Changes for RemoveMB:
-    - Start development for v0.26
+    - Remove the old code that was checking the number of parameters.
+    - Change the initial local parameter assignment to fail if the function
+      isn't passed a parameter.
 
 0.25    18:52 15 September 2012
     Changes for OpenMB:
