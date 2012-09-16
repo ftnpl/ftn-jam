@@ -327,7 +327,7 @@ Syntax: FTN::JAM::UnlockMB($handle)
 
 sub UnlockMB {
 
-    my $handleref = $_[0];
+    my $handleref = @_ or croak 'UnlockMB requires a reference to a file hash as a parameter.';
 
     if ( $$handleref{locked} ) {
         flock( $$handleref{jhr}, 8 );
