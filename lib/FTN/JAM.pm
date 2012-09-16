@@ -65,7 +65,7 @@ Syntax: $handle = FTN::JAM::OpenMB($jampath)
 
 sub OpenMB {
 
-    my $jampath = @_ or croak 'OpenMB requires a base file name and path as a parameter.';
+    my ($jampath) = @_ or croak 'OpenMB requires a base file name and path as a parameter.';
 
     my ($JHR, $JDX, $JDT, $JLR);
 
