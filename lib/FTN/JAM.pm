@@ -15,11 +15,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.28
+Version 0.29
 
 =cut
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 
 =head1 SYNOPSIS
 
@@ -327,13 +327,13 @@ Syntax: FTN::JAM::UnlockMB($handle)
 
 sub UnlockMB {
 
-    my $handleref = @_ or croak 'UnlockMB requires a reference to a file hash as a parameter.';
+    my ($handleref) = @_ or croak 'UnlockMB requires a reference to a file hash as a parameter.';
 
     if ( $$handleref{locked} ) {
         flock( $$handleref{jhr}, 8 );
         delete $$handleref{locked};
     }
-    return;
+    return 1;
 }
 
 =head2 ReadMBHeader
