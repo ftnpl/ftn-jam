@@ -1,5 +1,11 @@
 Revision history for FTN-JAM
 
+0.28    10:24 16 September 2012
+    Changes for Crc32:
+    - Remove the old code that was checking the number of parameters.
+    - Change the initial local parameter assignment to fail if the function
+      isn't passed a parameter.
+
 0.27    10:01 16 September 2012
     Changes for UnlockMB:
     - Remove the old code that was checking the number of parameters.

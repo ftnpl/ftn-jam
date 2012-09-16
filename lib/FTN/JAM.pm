@@ -15,11 +15,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.27
+Version 0.28
 
 =cut
 
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 
 =head1 SYNOPSIS
 
@@ -951,11 +951,8 @@ Syntax: $crc32 = FTN::JAM::Crc32($data)
 =cut
 
 sub Crc32 {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::Crc32";
-    }
 
-    my $data = $_[0];
+    my $data = @_ or croak 'Crc32 requires the data to be checked as a parameter.';
 
     my $crc;
     my @table;
