@@ -244,9 +244,6 @@ Syntax: FTN::JAM::RemoveMB($jampath)
 =cut
 
 sub RemoveMB {
-    if ( $#_ != 0 ) {
-        croak "Wrong number of arguments for FTN::JAM::RemoveMB";
-    }
 
     my $jampath = $_[0];
 
