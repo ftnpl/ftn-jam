@@ -245,7 +245,7 @@ Syntax: FTN::JAM::RemoveMB($jampath)
 
 sub RemoveMB {
 
-    my $jampath = $_[0];
+    my $jampath = @_ or croak 'RemoveMB requires a base file name and path as a parameter.';
 
     my $hasjdx = ( -e $jampath . ".jdx" );
     my $hasjhr = ( -e $jampath . ".jhr" );
