@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.30    hh:mm dd September 2012
+    - Start development for v0.30
+
 0.29    13:20 16 September 2012
     Changes for UnlockMB:
     - Explicitly have UnlockMB return true for a normal exit.
