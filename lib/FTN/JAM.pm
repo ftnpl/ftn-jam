@@ -952,7 +952,7 @@ Syntax: $crc32 = FTN::JAM::Crc32($data)
 
 sub Crc32 {
 
-    my $data = @_ or croak 'Crc32 requires the data to be checked as a parameter.';
+    my ($data) = @_ or croak 'Crc32 requires the data to be checked as a parameter.';
 
     my $crc;
     my @table;
