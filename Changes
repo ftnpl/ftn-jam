@@ -1,5 +1,8 @@
 Revision history for FTN-JAM
 
+0.29    12:47 16 September 2012
+    Changes for UnlockMB:
+
 0.28    10:24 16 September 2012
     Changes for Crc32:
     - Remove the old code that was checking the number of parameters.
