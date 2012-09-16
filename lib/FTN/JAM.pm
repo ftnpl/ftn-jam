@@ -15,11 +15,11 @@ FTN::JAM - A Perl extension for handleing JAM messagebases.
 
 =head1 VERSION
 
-Version 0.29
+Version 0.30
 
 =cut
 
-our $VERSION = '0.29';
+our $VERSION = '0.30';
 
 =head1 SYNOPSIS
 
@@ -65,7 +65,7 @@ Syntax: $handle = FTN::JAM::OpenMB($jampath)
 
 sub OpenMB {
 
-    my $jampath = @_ or croak 'OpenMB requires a base file name and path as a parameter.';
+    my ($jampath) = @_ or croak 'OpenMB requires a base file name and path as a parameter.';
 
     my ($JHR, $JDX, $JDT, $JLR);
 
@@ -245,7 +245,7 @@ Syntax: FTN::JAM::RemoveMB($jampath)
 
 sub RemoveMB {
 
-    my $jampath = @_ or croak 'RemoveMB requires a base file name and path as a parameter.';
+    my ($jampath) = @_ or croak 'RemoveMB requires a base file name and path as a parameter.';
 
     my $hasjdx = ( -e $jampath . ".jdx" );
     my $hasjhr = ( -e $jampath . ".jhr" );
@@ -952,7 +952,7 @@ Syntax: $crc32 = FTN::JAM::Crc32($data)
 
 sub Crc32 {
 
-    my $data = @_ or croak 'Crc32 requires the data to be checked as a parameter.';
+    my ($data) = @_ or croak 'Crc32 requires the data to be checked as a parameter.';
 
     my $crc;
     my @table;
