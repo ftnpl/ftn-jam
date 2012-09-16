@@ -333,7 +333,7 @@ sub UnlockMB {
         flock( $$handleref{jhr}, 8 );
         delete $$handleref{locked};
     }
-    return;
+    return 1;
 }
 
 =head2 ReadMBHeader
