@@ -1,5 +1,9 @@
 Revision history for FTN-JAM
 
+0.26    09:16 16 September 2012
+    Changes for LockMB:
+    - Remove the old code that was checking the number of parameters.
+
 0.26    09:08 16 September 2012
     Changes for RemoveMB:
     - Remove the old code that was checking the number of parameters.
