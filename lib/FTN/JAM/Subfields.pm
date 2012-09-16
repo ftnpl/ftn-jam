@@ -11,11 +11,11 @@ FTN::JAM::Subfields - A Perl extension for handleing JAM messagebase Subfield re
 
 =head1 VERSION
 
-Version 0.25
+Version 0.26
 
 =cut
 
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 =head1 DESCRIPTION
 

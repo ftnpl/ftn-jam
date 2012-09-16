@@ -1,5 +1,9 @@
 Revision history for FTN-JAM
 
+0.26    08:59 16 September 2012
+    Changes for RemoveMB:
+    - Start development for v0.26
+
 0.25    18:52 15 September 2012
     Changes for OpenMB:
     - Remove the old code that was checking the number of parameters.
