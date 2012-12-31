@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -18,7 +18,7 @@ if ($#ARGV != 1 ) {
 my $mb = $ARGV[0];
 my $num = $ARGV[1];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if(!$handle) {
    die "Failed to open $mb";
@@ -26,14 +26,14 @@ if(!$handle) {
 
 my %baseheader;
 
-if (!JAM::ReadMBHeader($handle,\%baseheader)) {
+if (!FTN::JAM::ReadMBHeader($handle,\%baseheader)) {
    die "Failed to read message header of $mb";
 }
 
 printf "Base header:\n";
 printf "\n";
 printf "  Signature: %s\n",$baseheader{Signature};
-printf "DateCreated: 0x%08x (%s)\n",$baseheader{DateCreated},scalar localtime(JAM::LocalToTime($baseheader{DateCreated}));
+printf "DateCreated: 0x%08x (%s)\n",$baseheader{DateCreated},scalar localtime(FTN::JAM::LocalToTime($baseheader{DateCreated}));
 printf " ModCounter: %d\n",$baseheader{ModCounter};
 printf " ActiveMsgs: %d\n",$baseheader{ActiveMsgs};
 printf "PasswordCRC: 0x%08x\n",$baseheader{PasswordCRC};
@@ -44,7 +44,7 @@ my %msgheader;
 my @subfields;
 my $text;
 
-if (!JAM::ReadMessage($handle,$num,\%msgheader,\@subfields,\$text)) {
+if (!FTN::JAM::ReadMessage($handle,$num,\%msgheader,\@subfields,\$text)) {
    die "Failed to read message $num";
 }
 
@@ -60,9 +60,9 @@ printf "     ReplyCRC: 0x%08x\n",$msgheader{ReplyCRC};
 printf "      ReplyTo: %d\n",$msgheader{ReplyTo};
 printf "     Reply1st: %d\n",$msgheader{Reply1st};
 printf "    ReplyNext: %d\n",$msgheader{ReplyNext};
-printf "  DateWritten: 0x%08x (%s)\n",$msgheader{DateWritten},scalar localtime(JAM::LocalToTime($msgheader{DateWritten}));
-printf " DateReceived: 0x%08x (%s)\n",$msgheader{DateReceived},scalar localtime(JAM::LocalToTime($msgheader{DateReceived}));
-printf "DateProcessed: 0x%08x (%s)\n",$msgheader{DateProcessed},scalar localtime(JAM::LocalToTime($msgheader{DateProcessed}));
+printf "  DateWritten: 0x%08x (%s)\n",$msgheader{DateWritten},scalar localtime(FTN::JAM::LocalToTime($msgheader{DateWritten}));
+printf " DateReceived: 0x%08x (%s)\n",$msgheader{DateReceived},scalar localtime(FTN::JAM::LocalToTime($msgheader{DateReceived}));
+printf "DateProcessed: 0x%08x (%s)\n",$msgheader{DateProcessed},scalar localtime(FTN::JAM::LocalToTime($msgheader{DateProcessed}));
 printf "       MsgNum: %d\n",$msgheader{MsgNum};
 printf "   Attributes: 0x%08x\n",$msgheader{Attributes};
 printf "  Attributes2: 0x%08x\n",$msgheader{Attributes2};
@@ -88,4 +88,4 @@ $text =~ s/\x0d/\x0a/g;
 $Text::Wrap::columns = 79;
 print wrap("","",$text);
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);

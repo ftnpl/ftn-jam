@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -38,13 +38,13 @@ if ( !$getopt_res or $opts{help} or $#ARGV != 0) {
 
 my $mb = $ARGV[0];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if (!$handle) {
    die "Failed to open $mb";
 }
 
-if (!JAM::LockMB($handle,0)) {
+if (!FTN::JAM::LockMB($handle,0)) {
    die "Failed to lock messagebase $mb";
 }
 
@@ -54,15 +54,15 @@ my @subfields;
 
 my $text = "";
 
-if ($opts{fromname}) { $subfields{JAM::Subfields::SENDERNAME} = $opts{fromname}; }
-if ($opts{fromaddr}) { $subfields{JAM::Subfields::OADDRESS}   = $opts{fromaddr}; }
-if ($opts{toname}) { $subfields{JAM::Subfields::RECVRNAME}    = $opts{toname}; }
-if ($opts{toaddr}) { $subfields{JAM::Subfields::DADDRESS}     = $opts{toaddr}; }
-if ($opts{subject}) { $subfields{JAM::Subfields::SUBJECT}     = $opts{subject}; }
+if ($opts{fromname}) { $subfields{FTN::JAM::Subfields::SENDERNAME} = $opts{fromname}; }
+if ($opts{fromaddr}) { $subfields{FTN::JAM::Subfields::OADDRESS}   = $opts{fromaddr}; }
+if ($opts{toname}) { $subfields{FTN::JAM::Subfields::RECVRNAME}    = $opts{toname}; }
+if ($opts{toaddr}) { $subfields{FTN::JAM::Subfields::DADDRESS}     = $opts{toaddr}; }
+if ($opts{subject}) { $subfields{FTN::JAM::Subfields::SUBJECT}     = $opts{subject}; }
 
 @subfields = %subfields;
 
-$msgheader{DateWritten} = JAM::TimeToLocal(time);
+$msgheader{DateWritten} = FTN::JAM::TimeToLocal(time);
 
 if ($opts{file}) {
    open (FILE,$opts{file}) or die "Failed to open $opts{file}";
@@ -74,7 +74,7 @@ if ($opts{file}) {
    close (FILE);
 }
 
-my $num = JAM::AddMessage($handle,\%msgheader,\@subfields,\$text);
+my $num = FTN::JAM::AddMessage($handle,\%msgheader,\@subfields,\$text);
 
 if ($num) {
    print "Added as message number $num\n";
@@ -83,5 +83,5 @@ else {
    print "Failed to add message\n";
 }
 
-JAM::UnlockMB($handle);
-JAM::CloseMB($handle);
+FTN::JAM::UnlockMB($handle);
+FTN::JAM::CloseMB($handle);

@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -16,7 +16,7 @@ if ($#ARGV != 0 ) {
 
 my $mb = $ARGV[0];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if(!$handle) {
    die "Failed to open $mb";
@@ -24,18 +24,18 @@ if(!$handle) {
 
 my %baseheader;
 
-if (!JAM::ReadMBHeader($handle,\%baseheader)) {
+if (!FTN::JAM::ReadMBHeader($handle,\%baseheader)) {
    die "Failed to read messagebase header of $mb";
 }
 
-print "DateCreated: ",scalar localtime(JAM::LocalToTime($baseheader{DateCreated})),"\n";
+print "DateCreated: ",scalar localtime(FTN::JAM::LocalToTime($baseheader{DateCreated})),"\n";
 print " BaseMsgNum: $baseheader{BaseMsgNum}\n";
 print " ActiveMsgs: $baseheader{ActiveMsgs}\n";
 print "\n";
 
 my $nummsgs;
 
-if (!JAM::GetMBSize($handle,\$nummsgs)) {
+if (!FTN::JAM::GetMBSize($handle,\$nummsgs)) {
    die "Failed to get size of messagebase $mb";
 }
 
@@ -50,15 +50,15 @@ for (my $i = $baseheader{BaseMsgNum}; $i < $baseheader{BaseMsgNum}+$nummsgs; $i+
    my %msgheader;
    my @subfields;
 
-   if (!JAM::ReadMessage($handle,$i,\%msgheader,\@subfields,0)) {
+   if (!FTN::JAM::ReadMessage($handle,$i,\%msgheader,\@subfields,0)) {
       printf("%6s Failed to open message\n",$i);
    }
    else {
       my %subfieldhash = @subfields;
 
-      my $from = $subfieldhash{JAM::Subfields::SENDERNAME};
-      my $to   = $subfieldhash{JAM::Subfields::RECVRNAME};
-      my $subj = $subfieldhash{JAM::Subfields::SUBJECT};
+      my $from = $subfieldhash{FTN::JAM::Subfields::SENDERNAME};
+      my $to   = $subfieldhash{FTN::JAM::Subfields::RECVRNAME};
+      my $subj = $subfieldhash{FTN::JAM::Subfields::SUBJECT};
 
       if (!$from) { $from = "<empty>"; }
       if (!$to)   { $to   = "<empty>"; }
@@ -68,4 +68,4 @@ for (my $i = $baseheader{BaseMsgNum}; $i < $baseheader{BaseMsgNum}+$nummsgs; $i+
    }
 }
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);
