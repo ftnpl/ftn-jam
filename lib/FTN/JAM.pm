@@ -948,6 +948,9 @@ sub AddMessage {
 
 Syntax: $crc32 = FTN::JAM::Crc32($data)
 
+Returns a 32 bit CRC (cyclic redundancy check) checksum of the 'data' parameter
+and fails if that parameter is not present when called.
+
 =cut
 
 sub Crc32 {
