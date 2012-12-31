@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -16,9 +16,9 @@ if ($#ARGV != 1 ) {
 }
 
 my $mb = $ARGV[0];
-my $usercrc = JAM::Crc32($ARGV[1]);
+my $usercrc = FTN::JAM::Crc32($ARGV[1]);
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if(!$handle) {
    die "Failed to open $mb";
@@ -26,26 +26,26 @@ if(!$handle) {
 
 my %baseheader;
 
-if (!JAM::ReadMBHeader($handle,\%baseheader)) {
+if (!FTN::JAM::ReadMBHeader($handle,\%baseheader)) {
    die "Failed to read messagebase header of $mb";
 }
 
 my $start = $baseheader{BaseMsgNum};
 my $found;
 
-while ($found = JAM::FindUser($handle,$usercrc, $start)) {
+while ($found = FTN::JAM::FindUser($handle,$usercrc, $start)) {
    my %msgheader;
    my @subfields;
 
-   if (!JAM::ReadMessage($handle,$found,\%msgheader,\@subfields,0)) {
+   if (!FTN::JAM::ReadMessage($handle,$found,\%msgheader,\@subfields,0)) {
       printf("%6s Failed to open message\n",$found);
    }
    else {
       my %subfieldhash = @subfields;
 
-      my $from = $subfieldhash{JAM::Subfields::SENDERNAME};
-      my $to   = $subfieldhash{JAM::Subfields::RECVRNAME};
-      my $subj = $subfieldhash{JAM::Subfields::SUBJECT};
+      my $from = $subfieldhash{FTN::JAM::Subfields::SENDERNAME};
+      my $to   = $subfieldhash{FTN::JAM::Subfields::RECVRNAME};
+      my $subj = $subfieldhash{FTN::JAM::Subfields::SUBJECT};
 
       if (!$from) { $from = "<empty>"; }
       if (!$to)   { $to   = "<empty>"; }
@@ -58,4 +58,4 @@ while ($found = JAM::FindUser($handle,$usercrc, $start)) {
    $start = $found+1;
 }
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);

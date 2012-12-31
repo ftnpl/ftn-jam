@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -18,7 +18,7 @@ if ($#ARGV != 1 ) {
 my $mb = $ARGV[0];
 my $num = $ARGV[1];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if(!$handle) {
    die "Failed to open $mb";
@@ -28,17 +28,17 @@ my %msgheader;
 my @subfields;
 my $text;
 
-if (!JAM::ReadMessage($handle,$num,\%msgheader,\@subfields,\$text)) {
+if (!FTN::JAM::ReadMessage($handle,$num,\%msgheader,\@subfields,\$text)) {
    die "Failed to read message $num";
 }
 
 my %subfieldhash = @subfields;
 
-my $fromname = $subfieldhash{JAM::Subfields::SENDERNAME};
-my $fromaddr = $subfieldhash{JAM::Subfields::OADDRESS};
-my $toname   = $subfieldhash{JAM::Subfields::RECVRNAME};
-my $toaddr   = $subfieldhash{JAM::Subfields::DADDRESS};
-my $subject  = $subfieldhash{JAM::Subfields::SUBJECT};
+my $fromname = $subfieldhash{FTN::JAM::Subfields::SENDERNAME};
+my $fromaddr = $subfieldhash{FTN::JAM::Subfields::OADDRESS};
+my $toname   = $subfieldhash{FTN::JAM::Subfields::RECVRNAME};
+my $toaddr   = $subfieldhash{FTN::JAM::Subfields::DADDRESS};
+my $subject  = $subfieldhash{FTN::JAM::Subfields::SUBJECT};
 
 if (!$fromname) { $fromname = "<unknown>"; }
 if (!$toname)   { $toname   = "<unknown>"; }
@@ -51,11 +51,11 @@ if ($toaddr) { print "  To: $toname ($toaddr)\n"; }
 else         { print "  To: $toname\n"; }
 
 print "Subj: $subject\n"; 
-print "Date: ",scalar localtime(JAM::LocalToTime($msgheader{DateWritten})),"\n";
+print "Date: ",scalar localtime(FTN::JAM::LocalToTime($msgheader{DateWritten})),"\n";
 print "\n";
 
 $text =~ s/\x0D/\x0A/g;
 $Text::Wrap::columns = 79;
 print wrap("","",$text);
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);

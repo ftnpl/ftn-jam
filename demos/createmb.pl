@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -15,10 +15,10 @@ if ($#ARGV != 1 ) {
 my $mb = $ARGV[0];
 my $basemsgnum = $ARGV[1];
 
-my $handle = JAM::CreateMB($mb,$basemsgnum);
+my $handle = FTN::JAM::CreateMB($mb,$basemsgnum);
 
 if(!$handle) {
    die "Failed to create $mb";
 }
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);

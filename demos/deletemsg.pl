@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -15,7 +15,7 @@ if ($#ARGV != 1 ) {
 my $mb = $ARGV[0];
 my $num = $ARGV[1];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 my %msgheader;
 
@@ -23,19 +23,19 @@ if(!$handle) {
    die "Failed to open $mb";
 }
 
-if(!JAM::ReadMessage($handle,$num,\%msgheader,0,0)) {
+if(!FTN::JAM::ReadMessage($handle,$num,\%msgheader,0,0)) {
    die "Failed to read message $num";
 }
 
-$msgheader{Attributes} |= JAM::Attr::DELETED;
+$msgheader{Attributes} |= FTN::JAM::Attr::DELETED;
 
-if(!JAM::LockMB($handle,0)) {
+if(!FTN::JAM::LockMB($handle,0)) {
    die "Failed to lock messagebase $mb";
 }
 
-if(!JAM::ChangeMessage($handle,$num,\%msgheader)) {
+if(!FTN::JAM::ChangeMessage($handle,$num,\%msgheader)) {
    die "Failed to delete message $num";
 }
 
-JAM::UnlockMB($handle);
-JAM::CloseMB($handle);
+FTN::JAM::UnlockMB($handle);
+FTN::JAM::CloseMB($handle);

@@ -1,6 +1,15 @@
 Revision history for FTN-JAM
 
-0.30    16:49 dd September 2012
+0.31    17:40 31 December 2012
+    - Rename TODO file from ToDo.pod to TODO.pod.
+    - Add a description to the Crc32 function in JAM.pm.
+    - Correct the demo scripts from referenceing the JAM module to referencing
+      the FTN::JAM module, but still keep them only in the code repository for
+      now.
+    - Correct the day entry from "dd" to "16" in the version v0.30 entry in
+      the Changes file.
+
+0.30    16:49 16 September 2012
     - Add parentheses to the parameter localization in the RemoveMB, OpenMB,
       and Crc32 functions.
 

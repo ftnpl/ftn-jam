@@ -1,8 +1,8 @@
 #!/usr/local/bin/perl
 #
-# Small demonstration of JAM.pm
+# Small demonstration of FTN::JAM.pm
 
-use JAM;
+use FTN::JAM;
 
 use strict;
 use warnings;
@@ -14,7 +14,7 @@ if ($#ARGV != 4 ) {
 
 my $mb = $ARGV[0];
 
-my $handle = JAM::OpenMB($mb);
+my $handle = FTN::JAM::OpenMB($mb);
 
 if(!$handle) {
    die "Failed to open $mb";
@@ -27,8 +27,8 @@ $lastread{UserID}      = $ARGV[2];
 $lastread{LastReadMsg} = $ARGV[3];
 $lastread{HighReadMsg} = $ARGV[4];
 
-if (!JAM::SetLastRead($handle,$ARGV[2],\%lastread)) {
+if (!FTN::JAM::SetLastRead($handle,$ARGV[2],\%lastread)) {
    die "SetLastRead failed";
 }
 
-JAM::CloseMB($handle);
+FTN::JAM::CloseMB($handle);
