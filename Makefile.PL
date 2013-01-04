@@ -9,6 +9,7 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/FTN/JAM.pm',
     LICENSE             => 'perl',
     PL_FILES            => {},
+    MIN_PERL_VERSION => '5.006',
     PREREQ_PM => {
         'Readonly'      => 0,
         'Time::Local'   => 0,

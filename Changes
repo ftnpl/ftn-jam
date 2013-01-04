@@ -1,5 +1,9 @@
 Revision history for FTN-JAM
 
+0.32    15:29  4 January 2013
+    - Update the copyright end year to 2013.
+    - Set Minimum Perl version for module to '5.006'.
+
 0.31    17:40 31 December 2012
     - Rename TODO file from ToDo.pod to TODO.pod.
     - Add a description to the Crc32 function in JAM.pm.

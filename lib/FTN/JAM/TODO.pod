@@ -8,12 +8,15 @@ such as FTN::JAM::Tutorial, and have example scripts based on cleaned up demo
 scripts?  And/or create possibly separate ftnjam distribution that provides a
 script that both does some basic operations on JAM message bases as well
 as serving as an example of how to use FTN::JAM. And/or use them as the 
-basis for additional tests in the t/ directory.
+basis for additional tests in the t/ directory? Note that some of the basic
+functions are already in the t/01-basic.t test file.
 
 Having the global variable $Errnum and the package FTN::JAM::Errnum may
 not a good idea, as referencing $FTN::JAM::Errnum or the error number
 constant $FTN::JAM::Errnum::IO_ERROR might be ambigous. Change the 
-name for the global variable and/or the package?
+name for the global variable and/or the package? Change the name of $Errnum
+to $error_number? Change both the global varible as well as the module
+package name (which is used for the constants definitions)?
 
 The existing code uses the global variable $Errnum for error numbers.  For
 those functions that already return a hash, and therefore the code calling
@@ -44,8 +47,6 @@ being used in the subroutine.
 
 Move the TEST:* modules from the PREREQ_PM section in Makefile.PL to a new
 BUILD_REQUIRES section.
-
-Change the name of $Errnum to $error_number? 
 
 A message base packing function is not directly available. It could be done
 by creation of a temporary message base, copying the messages from the one
@@ -337,8 +338,10 @@ In the RemoveMB test in 01-basic.t; use the already existing $mb containing
 the path and name for the test message base?
 
 Separate out the testing sections in the 01-basic.t script using BEGIN blocks,
-so that it's easier to see where problems are happening?
+so that it is easier to see where problems are happening?
 
+And/or use them as the basis for additional tests in the t/ directory? Note
+that some of the basic functions are already in the t/01-basic.t test file.
 
 =head1 SEE ALSO
 
@@ -352,7 +355,7 @@ Robert James Clay, C<< <jame at rocasa.us> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Robert James Clay, all rights reserved.
+Copyright 2013 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
